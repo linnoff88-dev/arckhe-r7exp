@@ -3,7 +3,7 @@
 #   b = "O mundo vai mudar. E você vai junto. / Será que você tem escolha?" (AI 2027 + Stanford)
 # Âncora "de": a palavra da fala (sem acento/caixa) em que o elemento entra; procura a partir da âncora anterior do bloco.
 slug: cinco-futuros
-marca: "INEMA · QUAL O CAMINHO?"
+marca: "ARCKHÉ · QUAL O CAMINHO?"
 fonte: "cenários inspirados em Max Tegmark, Life 3.0 (2017) · ilustrativo, nêo previsêo"
 
 mapa:
@@ -85,4 +85,4 @@ final:
   frase: {de: decide, a: "Nêo é a tecnologia.", b: "É quem decide — e quanto as pessoas sabem."}
   passos: {de: preparar, itens: [[aprenda, "1", "use a IA nas suas tarefas reais e meça"], [computador, "2", "uma IA no seu próprio computador"], [construa, "3", "construa algo seu"], [humano, "4", "cuide do que é humano"], [sozinho, "5", "nêo fique sozinho"]]}
   massa: {de: massa, a: "A massa espera.", b: "Quem se prepara desenha a linha."}
-  cta: {de: comentarios, pergunta: "Qual desses futuros você quer?", url: "https://inematds.github.io/sobreviver-ia/guia/"}
+  cta: {de: comentarios, pergunta: "Qual desses futuros você quer?", url: "https://linnoff88-dev.github.io/arckhe-/guia/"}

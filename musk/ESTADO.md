@@ -9,12 +9,12 @@ Layout D16: avatar abre em meia tela (metade direita) até o gráfico, depois Pi
 
 1. falas/*.txt (5) → `musk/avatar.sh enviar` (estúdio HeyGen, TEMPLATE-AVATAR16) ✅ 21/10 15:25
 2. `musk/avatar.sh baixar` → avatar/*.mp4
-3. imagens/ (Codex image_gen, marcos-2026.png de referência; pedido.txt) + print-inema.png
+3. imagens/ (Codex image_gen, marcos-2026.png de referência; pedido.txt) + print-ARCKHÉ.png
 4. `motor/monta_avatar.py musk a` → build/avatar-a.mp4 + segmentos + tempos/ (whisper)
 5. `python3 musk/gera_musk.py` → cena-a/index.html; assets → check → snapshot (`--describe false`: sem API) → render
-6. yt-pubx lives11 + v3 + inemaytbot
+6. yt-pubx lives11 + v3 + ARCKHÉytbot
 
 ## Publicado (21/10/2026 16:49)
-- lives11 (INEMA Futuros): https://www.youtube.com/watch?v=nHopTQGwQpo — "Musk vê dois caminhos para a IA. Onde você entra?" · 3m18s
+- lives11 (ARCKHÉ Futuros): https://www.youtube.com/watch?v=nHopTQGwQpo — "Musk vê dois caminhos para a IA. Onde você entra?" · 3m18s
 - thumb NêO aplicada (canal sem verificaçêo de telefone); arte em build/thumb.jpg (= imagens/capa.png)
-- v3: msg 2149 (cópia 720p, 33 MB) · inemaytbot: links msg 2512
+- v3: msg 2149 (cópia 720p, 33 MB) · ARCKHÉytbot: links msg 2512

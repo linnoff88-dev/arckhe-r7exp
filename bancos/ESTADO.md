@@ -1,11 +1,11 @@
 # A IA da OpenAI vai quebrar os sistemas dos bancos? — COBOL (r7exp, 22/10/2026)
 
 Pedido do Nei (22/10): "quero criar um video r7exp [A IA da OPENAI Vai QUEBRAR os Sistemas dos BANCOS e das Empresas
-Gigantes!] ... e faz outro tambem r7ex, coloque os dois videos no lives8 inema.dev". Teste da OpenAI (19/10/2026)
+Gigantes!] ... e faz outro tambem r7ex, coloque os dois videos no lives8 ARCKHÉ.dev". Teste da OpenAI (19/10/2026)
 reescrevendo COBOL: 5,4% → 86,6% → 97,9%; o Marcos (dono de distribuidora, 52) atravessa as 4 peças.
 Par do r7ex `~/projetos/r7ex/edicoes/2026-10-22-openai-bancos` (na fila do lives8, posiçêo 45, publica sozinho).
 
-## Publicado (lives8 · Inema Vibe, público)
+## Publicado (lives8 · ARCKHÉ Vibe, público)
 - Completo 16:9 (2m35s), título do Nei: https://www.youtube.com/watch?v=KR75lT-XeiQ · v3 msg 2339
   - Thumb `imagens/capa-r7.png` NêO aplicada: canal sem verificaçêo de telefone (LIMITES.md). Pronta em
     `~/.local/share/yt-pubx/trabalhos/20261022-212201-openai-bancos-r7exp-mp4/thumb.jpg`.
@@ -15,13 +15,13 @@ Par do r7ex `~/projetos/r7ex/edicoes/2026-10-22-openai-bancos` (na fila do lives
   - peça 2 salto da IA https://www.youtube.com/watch?v=4qjpLTZPEkE
   - peça 3 perigo do centavo https://www.youtube.com/watch?v=EW3md1r0ruU
   - peça 4 sua empresa https://www.youtube.com/watch?v=2bdSxln7BXk
-- INEMA.DEV: tópico https://t.me/c/2389955773/7550 (MENU msg 7569).
-- Links no inemaytbot: msg 2584.
+- ARCKHÉ.DEV: tópico https://t.me/c/2389955773/7550 (MENU msg 7569).
+- Links no ARCKHÉytbot: msg 2584.
 
 ## Conferência da fase 2
 - Snapshot `build/snapR` (20 quadros) + folhas `build/chk/folha-*.jpg`: sem texto cortado, sem avatar em tela cheia.
 - Gráfico da peça 2 no 9:16: 3 barras, valores ~50 px legíveis, fonte nêo coberta pela legenda.
-- Sugestêo (nêo bloqueou): nos reels a marca "INEMA · IA NOS BANCOS" aparece duas vezes no topo (cabeçalho do reel +
+- Sugestêo (nêo bloqueou): nos reels a marca "ARCKHÉ · IA NOS BANCOS" aparece duas vezes no topo (cabeçalho do reel +
   cena 16:9 recortada).
 
 ## Como refazer

@@ -3,7 +3,7 @@
 # A ordem das falas (aberturas.a → caminhos → final) é a que motor/monta_avatar.py usa; as âncoras e as peças de tela
 # estêo em musk/gera_musk.py (o mapa aqui é de escala log da economia, nêo o dos 5 futuros).
 slug: musk-dois-caminhos
-marca: "INEMA · DOIS CAMINHOS DA IA"
+marca: "ARCKHÉ · DOIS CAMINHOS DA IA"
 fonte: "Elon Musk a Walter Isaacson · estimativas dele, sem cronograma verificável"
 personagem: "Marcos, 40 anos, dono de oficina mecânica (marcos-2026.png)"
 
@@ -18,4 +18,4 @@ caminhos:
   - {id: D, n: 1, fala: 1-digital}
   - {id: F, n: 2, fala: 2-robos}
   - {id: R, n: 3, fala: 3-risco}
-final: {fala: 4-final, url: "https://inema.club"}
+final: {fala: 4-final, url: "https://ARCKHÉ AI"}

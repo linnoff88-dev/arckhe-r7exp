@@ -299,11 +299,11 @@ class Cena(P.Cena):
         for i in range(4):
             self.estado(tr + i * 0.2, [i], 3, VERDE, "#0f2a17", stagger=0)
         self.faixa("RECONSTRUIR A TECNOLOGIA QUE MOVE AS EMPRESAS", tr, ti + 0.2, cor=VERDE)
-        tclub = F.t("inema", depois=ti, obrig=False) or ti + 2
+        tclub = F.t("ARCKHÉ", depois=ti, obrig=False) or ti + 2
         i3 = self.id("in")
         corpo = (f'<div class="in" id="{i3}"><img class="foto" src="assets/final-marcos.png" alt=""/><div class="full" style="background:rgba(12,12,16,.8)"></div><div class="fim"><h2>E a sua empresa?</h2>'
-                 f'<div class="sub">comenta: “eu vou modernizar” 👇</div><div class="pill" id="{i3}p">inema.club</div></div>'
-                 f'<div class="printc" id="{i3}pr"><img src="assets/print-inema.png" alt="inema.club"/><span>aberto e gratuito · inema.club</span></div></div>')
+                 f'<div class="sub">comenta: “eu vou modernizar” 👇</div><div class="pill" id="{i3}p">ARCKHÉ AI</div></div>'
+                 f'<div class="printc" id="{i3}pr"><img src="assets/print-ARCKHÉ.png" alt="ARCKHÉ AI"/><span>aberto e gratuito · ARCKHÉ AI</span></div></div>')
         self.clip(ti - 0.1, fim_total, corpo, 6)
         self.esconde_mapa(ti - 0.1, fim_total + 2)
         self.a(f'tl.fromTo("#{i3}", {{opacity:0}}, {{opacity:1, duration:0.6}}, {ti - 0.1:.2f});')
@@ -312,7 +312,7 @@ class Cena(P.Cena):
 
 
 CORRIGE = {"ia": "IA", "Ia": "IA", "IA.": "IA.", "Cobol": "COBOL", "Cobol.": "COBOL.", "Cobol,": "COBOL,", "Cobalt": "COBOL",
-           "cobol": "COBOL", "Open": "Open", "inema": "inema"}
+           "cobol": "COBOL", "Open": "Open", "ARCKHÉ": "ARCKHÉ"}
 
 
 def falso(ordem):
@@ -364,7 +364,7 @@ def main():
     pip = G.PIP
     av = (f'<div id="avw" style="left:{pip["left"]}px;top:{pip["top"]}px;width:{pip["w"]}px;height:{pip["h"]}px;">'
           f'<video id="av" src="assets/avatar-{V}.mp4" data-start="0" data-duration="{seg["total"]:.2f}" data-track-index="9" data-has-audio="true" data-volume="1" playsinline></video>'
-          f'<div class="avtag">Nei Maldaner · INEMA</div></div>')
+          f'<div class="avtag">Nei Maldaner · ARCKHÉ</div></div>')
     if limpo:
         av = ""
         cena.js = [l for l in cena.js if '"#avw"' not in l and '"#legenda"' not in l]
@@ -377,7 +377,7 @@ def main():
 <div id="root" data-composition-id="main" data-start="0" data-duration="{total:.2f}" data-width="1920" data-height="1080">
  <div id="mapaClip" class="clip full" data-start="0" data-duration="{total:.2f}" data-track-index="0"><div id="cam">{mapa_svg(f)}</div></div>
  {"".join(cena.html)}
- <div id="topo" class="clip full" data-start="0" data-duration="{total:.2f}" data-track-index="8"><div id="marca">INEMA <span>· {f["marca"].split("·")[-1].strip()}</span></div><div id="fonte">{f["fonte"]}</div></div>
+ <div id="topo" class="clip full" data-start="0" data-duration="{total:.2f}" data-track-index="8"><div id="marca">ARCKHÉ <span>· {f["marca"].split("·")[-1].strip()}</span></div><div id="fonte">{f["fonte"]}</div></div>
  {av}
  <div id="legenda" class="clip full" data-start="0" data-duration="{total:.2f}" data-track-index="10">{leg}</div>
 </div>

@@ -7,7 +7,7 @@
 
 ## v1
 
-- Publicado no lives6 (INEMA Robot): https://youtube.com/shorts/LgBkOTBVTxw — v3 msg 2174, link no inemaytbot.
+- Publicado no lives6 (ARCKHÉ Robot): https://youtube.com/shorts/LgBkOTBVTxw — v3 msg 2174, link no ARCKHÉytbot.
 - 58,6 s, 1080×1920. Revisor r7ex: aprovado, impacto 7 (build/revisor.json). Folha: build/folha.jpg.
 - Gerador: gera_v.py (molde reels/thwaites). Novidade: avatar abre em MEIA TELA (1080×960 embaixo) e vai ao PiP
   só com transform (quadro fixo + clip-path inset + scale/x/y no vídeo); animar left/top reprova o check do HyperFrames.

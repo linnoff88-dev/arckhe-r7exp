@@ -4,8 +4,8 @@
 # Uso: php/avatar.sh enviar | baixar
 set -u
 AQUI="$(cd "$(dirname "$0")" && pwd)"; HG="$HOME/projetos/r7ex/heygen"
-PERFIL="$HOME/.cache/inemaccbot/perfil-heygen"; mkdir -p "$AQUI/avatar"
-TRAVA="$HOME/.cache/inemaccbot/heygen-estudio.lock"
+PERFIL="$HOME/.cache/ARCKHÉccbot/perfil-heygen"; mkdir -p "$AQUI/avatar"
+TRAVA="$HOME/.cache/ARCKHÉccbot/heygen-estudio.lock"
 case "${1:-}" in
   enviar)
     for f in "$AQUI"/falas/*.txt; do

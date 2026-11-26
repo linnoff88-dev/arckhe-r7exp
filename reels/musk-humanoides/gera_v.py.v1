@@ -3,7 +3,7 @@
 
 Molde: reels/thwaites/gera_v.py. Diferença: o avatar abre em MEIA TELA (1080x960, embaixo) até "desenho" e vai para o PiP.
 Blocos: abertura (capa) · cérebro sem mãos → golfinho → curva de valor · escada log 1×…1.000.000× (palpite) ·
-dinheiro → watts e toneladas · Marcos e os dois caminhos · plano em 3 passos · participante ou espectador + inema.club.
+dinheiro → watts e toneladas · Marcos e os dois caminhos · plano em 3 passos · participante ou espectador + ARCKHÉ AI.
 Uso: python3 gera_v.py [--falso]   Precisa: tempos/w/words.json, cena/assets/avatar.mp4, imagens. Saída: cena/index.html
 """
 import json, re, sys, subprocess, unicodedata
@@ -20,7 +20,7 @@ FONTE = "Elon Musk a Walter Isaacson (série The Builders, out/2026) · números
 
 TROCAS = [
     ("trinta por cento", "30%"), ("30 por cento", "30%"), ("um milhão de vezes", "1 milhão de vezes"),
-    ("inema ponto club", "inema.club"), ("inema club", "inema.club"), ("inema.club", "inema.club"),
+    ("ARCKHÉ ponto club", "ARCKHÉ AI"), ("ARCKHÉ club", "ARCKHÉ AI"), ("ARCKHÉ AI", "ARCKHÉ AI"),
 ]
 COR = {"cai": "#ff4d4d", "espectador": "#ff4d4d", "longe": "#ff4d4d", "barato": "#ff4d4d", "explode": "#FACC15"}
 
@@ -292,7 +292,7 @@ def bloco_plano(c, F, ini, fim):
 
 
 def bloco_cta(c, F, ini, fim):
-    tPt, tEs, tEsc, tPa, tIn = F.t("Participante"), F.t("espectador"), F.t("escreve"), F.t("participar"), F.t("inema")
+    tPt, tEs, tEsc, tPa, tIn = F.t("Participante"), F.t("espectador"), F.t("escreve"), F.t("participar"), F.t("ARCKHÉ")
     corpo = '''<div class="ctas">
  <div class="esc">
   <div class="op opY" id="oP"><em>🙋</em><b>PARTICIPANTE</b></div>
@@ -300,7 +300,7 @@ def bloco_cta(c, F, ini, fim):
   <div class="op opG" id="oE"><em>🍿</em><b>ESPECTADOR</b></div>
  </div>
  <div class="bal" id="bal">💬 “eu escolho participar”</div>
- <div class="club" id="club"><b>inema.club</b><i>IA e robótica</i></div>
+ <div class="club" id="club"><b>ARCKHÉ AI</b><i>IA e robótica</i></div>
 </div>'''
     c.palco(ini, fim, corpo)
     c.entra("#oP", tPt - 0.1); c.entra("#oE", tEs - 0.1)
@@ -466,7 +466,7 @@ def main():
     leg = legenda(c, pal, total)
     av = (f'<div id="avw" style="left:{MEIA["left"]}px;top:{MEIA["top"]}px;width:{MEIA["w"]}px;height:{MEIA["h"]}px;">'
           f'<video id="av" src="assets/avatar.mp4" data-start="0" data-duration="{total:.2f}" data-track-index="9" data-has-audio="true" data-volume="1" playsinline></video></div>'
-          f'<div id="avb" style="left:{AV["left"]}px;top:{AV["top"]}px;width:{AV["w"]}px;height:{AV["h"]}px;"><div class="avtag">NEI MALDANER · INEMA</div></div>')
+          f'<div id="avb" style="left:{AV["left"]}px;top:{AV["top"]}px;width:{AV["w"]}px;height:{AV["h"]}px;"><div class="avtag">NEI MALDANER · ARCKHÉ</div></div>')
     html = f'''<!doctype html>
 <html lang="pt-BR" data-resolution="portrait">
 <head><meta charset="UTF-8"/><meta name="viewport" content="width=1080, height=1920"/>
@@ -475,7 +475,7 @@ def main():
 <body>
 <div id="root" data-composition-id="main" data-start="0" data-duration="{total:.2f}" data-width="1080" data-height="1920">
  {"".join(c.html)}
- <div id="topo" class="clip full" data-start="0" data-duration="{total:.2f}" data-track-index="8"><div id="marca">INEMA <span>· ROBÔS E IA</span></div><div id="fonte">{FONTE}</div></div>
+ <div id="topo" class="clip full" data-start="0" data-duration="{total:.2f}" data-track-index="8"><div id="marca">ARCKHÉ <span>· ROBÔS E IA</span></div><div id="fonte">{FONTE}</div></div>
  {av}
  <div id="legenda" class="clip full" data-start="0" data-duration="{total:.2f}" data-track-index="10">{leg}</div>
 </div>

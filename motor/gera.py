@@ -518,9 +518,9 @@ class Cena:
         self.a(f'tl.to(["#gE","#gZ"], {{opacity:0.25, duration:0.6}}, {td + 0.6:.2f});')
         i3 = self.id("in")
         corpo = (f'<div class="in" id="{i3}"><div class="full" style="background:rgba(12,12,16,.88)"></div><div class="fim"><h2>{fn["cta"]["pergunta"]}</h2>'
-                 f'<div class="sub">comenta aqui 👇</div><div class="pill" id="{i3}p">inema.club</div></div>'
-                 f'<div class="printc" id="{i3}pr"><img src="assets/print-guia.png" alt="guia sobreviver-ia"/><span>kit aberto · inema.club</span></div></div>')
-        tclub = F.t("inema", depois=td, obrig=False) or tq + 2
+                 f'<div class="sub">comenta aqui 👇</div><div class="pill" id="{i3}p">ARCKHÉ AI</div></div>'
+                 f'<div class="printc" id="{i3}pr"><img src="assets/print-guia.png" alt="guia sobreviver-ia"/><span>kit aberto · ARCKHÉ AI</span></div></div>')
+        tclub = F.t("ARCKHÉ", depois=td, obrig=False) or tq + 2
         self.clip(tq0 - 0.4, fim_total, corpo, 6)
         self.a(f'tl.fromTo("#{i3}", {{opacity:0}}, {{opacity:1, duration:0.6}}, {tq0 - 0.4:.2f});')
         self.entra(f"#{i3}p", tclub - 0.1)
@@ -553,7 +553,7 @@ def legenda(cena, palavras, fim_total):
     return "".join(html)
 
 
-CORRIGE = {"ia": "IA", "Ia": "IA", "inema.club": "inema.club"}
+CORRIGE = {"ia": "IA", "Ia": "IA", "ARCKHÉ AI": "ARCKHÉ AI"}
 
 
 def main():
@@ -582,7 +582,7 @@ def main():
     for s in seg["segmentos"]:
         for x in falas[s["fala"]].w:
             wd = CORRIGE.get(x["word"].strip(), x["word"].strip())
-            if pal and wd[:1] in "-." and len(wd) > 1:          # whisper separa "ex -funcionário", "inema .club"
+            if pal and wd[:1] in "-." and len(wd) > 1:          # whisper separa "ex -funcionário", "ARCKHÉ .club"
                 pal[-1]["word"] += wd; continue
             pal.append({"word": wd, "t": round(s["ini"] + x["start"], 2)})
     leg = "" if limpo else legenda(cena, pal, total)
@@ -591,7 +591,7 @@ def main():
     pip = PIP
     av = (f'<div id="avw" style="left:{pip["left"]}px;top:{pip["top"]}px;width:{pip["w"]}px;height:{pip["h"]}px;">'
           f'<video id="av" src="assets/avatar-{versao}.mp4" data-start="0" data-duration="{seg["total"]:.2f}" data-track-index="9" data-has-audio="true" data-volume="1" playsinline></video>'
-          f'<div class="avtag">Nei Maldaner · INEMA</div></div>')
+          f'<div class="avtag">Nei Maldaner · ARCKHÉ</div></div>')
     if limpo:
         av = ""
         cena.js = [l for l in cena.js if '"#avw"' not in l and '"#legenda"' not in l]
@@ -604,7 +604,7 @@ def main():
 <div id="root" data-composition-id="main" data-start="0" data-duration="{total:.2f}" data-width="1920" data-height="1080">
  <div id="mapaClip" class="clip full" data-start="0" data-duration="{total:.2f}" data-track-index="0"><div id="cam">{mapa_svg(f)}</div></div>
  {"".join(cena.html)}
- <div id="topo" class="clip full" data-start="0" data-duration="{total:.2f}" data-track-index="8"><div id="marca">INEMA <span>· {f["marca"].split("·")[-1].strip()}</span></div><div id="fonte">{f["fonte"]}</div></div>
+ <div id="topo" class="clip full" data-start="0" data-duration="{total:.2f}" data-track-index="8"><div id="marca">ARCKHÉ <span>· {f["marca"].split("·")[-1].strip()}</span></div><div id="fonte">{f["fonte"]}</div></div>
  {av}
  <div id="legenda" class="clip full" data-start="0" data-duration="{total:.2f}" data-track-index="10">{leg}</div>
 </div>

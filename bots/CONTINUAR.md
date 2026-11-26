@@ -24,11 +24,11 @@ o limpo e os 5 reels `build/reel-indice-4-bots.mp4`, `build/reel-bot-{1-grok,2-m
 2. Mandar ao **bot v3** (só arquivos, legenda sem link): `build/qual-bot-r7exp-720.mp4` e os 5 reels, com
    `node ~/projetos/refazvideo/ferramentas/enviar_bot_v3.mjs` (cada envio imprime "msg N").
 3. Publicar no **lives1** (público), sem citar o autor do vídeo original:
-   - completo: `cd ~/projetos/yt-pubx && ./yt-pubx publicar ~/projetos/r7exp/bots/build/qual-bot-r7exp.mp4 --canal lives1 --contexto-arquivo ~/projetos/r7exp/bots/falas/0-intro.txt --contexto "r7exp: a Carla, consultora, testa os 4 agentes pessoais (Grok Bot, Meta Muse, ChatGPT Dots, Claude Duet); a força e o ponto fraco de cada um; Duet ainda nêo está no Brasil. CTA inema.club." --dry-run`, olhar a thumb, publicar com `--plano`.
+   - completo: `cd ~/projetos/yt-pubx && ./yt-pubx publicar ~/projetos/r7exp/bots/build/qual-bot-r7exp.mp4 --canal lives1 --contexto-arquivo ~/projetos/r7exp/bots/falas/0-intro.txt --contexto "r7exp: a Carla, consultora, testa os 4 agentes pessoais (Grok Bot, Meta Muse, ChatGPT Dots, Claude Duet); a força e o ponto fraco de cada um; Duet ainda nêo está no Brasil. CTA ARCKHÉ AI." --dry-run`, olhar a thumb, publicar com `--plano`.
    - os 5 reels (9:16, sem thumb): mesmo comando com cada `build/reel-*.mp4` e contexto do bot daquele reel.
-4. Links: mandar todos os links ao **inemaytbot** dizendo "Publicado no lives1 (INEMA TDS)" (token TELEGRAM_NOTIFY_BOT_TOKEN
-   em `~/projetos/yt-pub-livesx-master/config/.env`, chat em `~/.config/aventurasinemavideo/telegram_chat`).
-5. `ESTADO.md` na pasta (modelo `php/ESTADO.md`), commit + push no repo r7exp (autor inematds), e gravar
+4. Links: mandar todos os links ao **ARCKHÉytbot** dizendo "Publicado no lives1 (ARCKHÉ TDS)" (token TELEGRAM_NOTIFY_BOT_TOKEN
+   em `~/projetos/yt-pub-livesx-master/config/.env`, chat em `~/.config/aventurasARCKHÉvideo/telegram_chat`).
+5. `ESTADO.md` na pasta (modelo `php/ESTADO.md`), commit + push no repo r7exp (autor linnoff88-dev), e gravar
    `CONTINUAR.resultado` com "FEITO: <urls> · v3 msgs N…" ou "FALHOU: <passo> — <motivo>".
 
 ## Travas

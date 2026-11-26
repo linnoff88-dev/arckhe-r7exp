@@ -12,20 +12,20 @@ nos 5 caminhos e no final "como se preparar"; cada caminho ensina como se adapta
 6. v3 ✅ 21/10 ~02h (A e B, cópias de 39 MB) — sem YouTube até o Nei aprovar
 
 ## Publicado (21/10/2026 ~02h15)
-- A → lives11 (INEMA Futuros): https://www.youtube.com/watch?v=ddWUJbfPgPk — thumb NêO aplicada (canal sem verificaçêo de telefone); arte em build/thumb-a.jpg
-- B → lives1 (INEMA TDS): https://www.youtube.com/watch?v=W2tBGNYlzi4 — capa nova capa-b1 ("2027. VOCÊ TEM ESCOLHA?"), thumb aplicada
-- v3: vídeos A/B identificados + capas + 3 opções de capa B; links no inemaytbot
+- A → lives11 (ARCKHÉ Futuros): https://www.youtube.com/watch?v=ddWUJbfPgPk — thumb NêO aplicada (canal sem verificaçêo de telefone); arte em build/thumb-a.jpg
+- B → lives1 (ARCKHÉ TDS): https://www.youtube.com/watch?v=W2tBGNYlzi4 — capa nova capa-b1 ("2027. VOCÊ TEM ESCOLHA?"), thumb aplicada
+- v3: vídeos A/B identificados + capas + 3 opções de capa B; links no ARCKHÉytbot
 
 ## Reels 9:16 (21/10/2026 ~18h)
 - `gera.py . a|b limpo` → reels/limpo-*.mp4; `motor/gera_reels.py .` → reels/<slug>/; render → reels/final/ (cópias v3 em final/v3)
 - v3 msgs 2160 (índice) · 2162 · 2164 · 2166 · 2170 · 2172 (caminhos 1–5). Sem YouTube até o Nei decidir.
 
 ## Playlist (21/10/2026)
-- lives11 (INEMA Futuros): https://www.youtube.com/playlist?list=PLGR_G3hBAAaM — A ddWUJbfPgPk · B W2tBGNYlzi4 · r7ex dt5ekPf7znY. Reels entram quando forem publicados (`CANAL=lives11 python3 ~/projetos/wifi/fila-espanhol/yt_api.py add PLGR_G3hBAAaM <id>`).
+- lives11 (ARCKHÉ Futuros): https://www.youtube.com/playlist?list=PLGR_G3hBAAaM — A ddWUJbfPgPk · B W2tBGNYlzi4 · r7ex dt5ekPf7znY. Reels entram quando forem publicados (`CANAL=lives11 python3 ~/projetos/wifi/fila-espanhol/yt_api.py add PLGR_G3hBAAaM <id>`).
 - Reels na fila do lives11 (r7ex/fila, na frente, com --playlist PLGR_G3hBAAaM): índice 21h de 21/10, caminhos 1–5 em 22/10 9–17h.
-- Publicados (lives11, todos na playlist): índice iWGJf2IwiRs · 1 IbSbkQmBEaM · 2 cPS1mv96H_g · 3 vaIWnSm3nkY · 4 hju4LeqC3Ds · 5 cNv5tblLd-8. Links no inemaytbot em 22/10.
-- Playlist espelho no lives1 (INEMA TDS): https://www.youtube.com/playlist?list=PLCTFUR8YB1Os — mesmos 9 vídeos, B primeiro (23/10).
-- Telegram 23/10: INEMA.VIP Novidades (t.me/c/2405283087/306) + tópico novo INEMA.IA 6169 (no MENU msg 6180), link da playlist lives11.
+- Publicados (lives11, todos na playlist): índice iWGJf2IwiRs · 1 IbSbkQmBEaM · 2 cPS1mv96H_g · 3 vaIWnSm3nkY · 4 hju4LeqC3Ds · 5 cNv5tblLd-8. Links no ARCKHÉytbot em 22/10.
+- Playlist espelho no lives1 (ARCKHÉ TDS): https://www.youtube.com/playlist?list=PLCTFUR8YB1Os — mesmos 9 vídeos, B primeiro (23/10).
+- Telegram 23/10: ARCKHÉ.VIP Novidades (t.me/c/2405283087/306) + tópico novo ARCKHÉ.IA 6169 (no MENU msg 6180), link da playlist lives11.
 
 ## Reel novo 9:16 "o que vai acontecer + 5 cenários" (28/10/2026)
 - `reels/cinco-cenarios/gera_v.py`: sem avatar novo — corta 22 frases das falas já gravadas (n-<fala>.mp4 + tempos), gráfico vertical próprio (mapa dos 5 caminhos, AI 2027, −19% Stanford, 72% dos 20 maiores supercomputadores com 3 donos — Epoch AI out/2026, da 1ª coleta do cinco-futuros), chamada por trecho. 97 s.
@@ -37,7 +37,7 @@ nos 5 caminhos e no final "como se preparar"; cada caminho ensina como se adapta
 - Pedido do Nei: "refaca ele usando o rtex rtexjp e r7ex e r7exp publique no lives11 na fila, e manda todos no v3".
 - `reels/cinco-cenarios-v2/`: `fala.txt` (315 palavras) → `avatar.sh enviar|baixar|preparar` (estúdio HeyGen, TEMPLATE-AVATAR16) → `gera_v2.py` (mesmo layout do cinco-cenarios; seções por palavra-marco). 107,5 s, −14,4 LUFS.
 - Whisper pulou 87–98 s: retranscrito o trecho e juntado (original em `tempos/fala.whisper-original.json`).
-- Revisor independente: aprovado 8, impacto 8; aplicadas: Ana apresentada na tela, "no cenário AI 2027", contador 72% em "três empresas", inema.club no cartêo final.
+- Revisor independente: aprovado 8, impacto 8; aplicadas: Ana apresentada na tela, "no cenário AI 2027", contador 72% em "três empresas", ARCKHÉ AI no cartêo final.
 - v3 msg 2954 · fila r7ex lives11 + playlist PLGR_G3hBAAaM (posiçêo 11).
 - r7ex irmêo: `~/projetos/r7ex/edicoes/2026-10-28-cinco-futuros-escolha` (produçêo automática → v3 + fila lives11 + playlist).
 - Reenvio ao v3 dos 10 já feitos: msgs 2930–2949 (`completo/reels/reenvio-2026-10-28b/`).
@@ -45,4 +45,4 @@ nos 5 caminhos e no final "como se preparar"; cada caminho ensina como se adapta
 ## Compilado 9:16 dos 6 reels em 2 partes (01/11/2026)
 - Pedido do Nei: juntar os reels (uma etapa em cada), 1ª com imagem impactante "você nêo pode deixar de fazer seu plano", publicar no metritds e no lives. Juntos davam 4:25 (> 3 min do Reels/Shorts) → 2 partes, parte 2 duas horas depois.
 - `completo/reels/compilado-5-caminhos/`: seg/ (reels sem a tela final repetida, exceto o último de cada parte), capa1/capa2 (Codex image_gen, Ana), parte1 (capa + índice + caminhos 1–2, 2:05) e parte2 (capa "PARTE 2 · FALTAM 3 FUTUROS" + caminhos 3–5, 2:04). Capa por cima da 1ª frase, 4,6 s com fade.
-- v3 msgs 3228/3230 (cópias -v3 leves; o original passa de 49 MB). lives11: parte 1 mQGNvYL-T4c, parte 2 I_qzz6o4Fdo (agendada 01/11 14:27), playlist PLGR_G3hBAAaM (posições 11–12). metritds (Instagram + TikTok inema.tds): 12:41 e 14:27, vídeos na release social de inematds/r7exp. Links no inemaytbot.
+- v3 msgs 3228/3230 (cópias -v3 leves; o original passa de 49 MB). lives11: parte 1 mQGNvYL-T4c, parte 2 I_qzz6o4Fdo (agendada 01/11 14:27), playlist PLGR_G3hBAAaM (posições 11–12). metritds (Instagram + TikTok ARCKHÉ.tds): 12:41 e 14:27, vídeos na release social de linnoff88-dev/r7exp. Links no ARCKHÉytbot.

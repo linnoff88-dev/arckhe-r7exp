@@ -4,5 +4,5 @@ Use a imagem anexada como REFERÊNCIA DO PERSONAGEM (Rafael: mesmo rosto, mesmo 
 3) matematica-rafael.png — Rafael em pé ao lado de uma mesa de madeira onde uma agulha de costura comprida está girando, com linhas finas desenhadas em giz branco mostrando o rastro do giro; ele observa curioso.
 4) voce-rafael.png — Rafael na sala de aula com alunos adolescentes (de costas ou de perfil, sem rosto em destaque), apontando para a tela de um notebook com uma resposta de IA, ensinando a conferir; clima de aula animada.
 5) final-rafael.png — Rafael sorrindo, confiante, de braços cruzados na frente do quadro-verde cheio de equações, olhando para a câmera.
-Estilo: ilustraçêo cinematográfica realista, luz NEUTRA (nada amarelado/âmbar, nada sépia), cores naturais. SEM texto legível e SEM logos.
+Estilo: ilustraçêo cARCKHÉtográfica realista, luz NEUTRA (nada amarelado/âmbar, nada sépia), cores naturais. SEM texto legível e SEM logos.
 Ao final, liste os caminhos dos arquivos salvos.

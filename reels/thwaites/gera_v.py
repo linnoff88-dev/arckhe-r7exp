@@ -24,7 +24,7 @@ TROCAS = [
     ("cinquenta e oito metros", "58 m"), ("mil oitocentos e oitenta", "1880"), ("dois mil e quatro", "2004"),
     ("dois mil e seis", "2006"), ("dois mil e cem", "2100"), ("dois quilômetros", "2 km"), ("um milímetro", "1 mm"),
     ("três centímetros", "3 cm"), ("vinte centímetros", "20 cm"), ("três metros", "3 m"), ("um metro", "1 metro"),
-    ("vinte andares", "20 andares"), ("inema ponto club", "inema.club"), ("inema club", "inema.club"),
+    ("vinte andares", "20 andares"), ("ARCKHÉ ponto club", "ARCKHÉ AI"), ("ARCKHÉ club", "ARCKHÉ AI"),
     ("360 quilômetros cúbicos", "360 km³"), ("65 centímetros", "65 cm"), ("58 metros", "58 m"), ("3 centímetros", "3 cm"),
     ("20 centímetros", "20 cm"), ("3 metros", "3 m"),
 ]
@@ -365,11 +365,11 @@ def bloco_nei(c, F, ini, fim):
 
 
 def bloco_cta(c, F, ini, fim):
-    tMa, tCo, tCi, tIn = F.t("mapa"), F.t("completo"), F.t("cidade"), F.t("inema")
+    tMa, tCo, tCi, tIn = F.t("mapa"), F.t("completo"), F.t("cidade"), F.t("ARCKHÉ")
     corpo = f'''<div class="ctas">
  <div class="cbox" id="q1"><small>VEJA SE A ÁGUA CHEGA NA SUA RUA</small><b>coastal.climatecentral.org</b><i>mapa de risco do mar subindo</i></div>
  <div class="cbox vid" id="q2"><img src="assets/thumb16.jpg" alt=""/><div><small>▶ VÍDEO COMPLETO NO CANAL</small><b>Geleira do Juízo Final</b></div></div>
- <div class="club" id="q3"><b>inema.club</b><i>aprenda inteligência artificial</i></div>
+ <div class="club" id="q3"><b>ARCKHÉ AI</b><i>aprenda inteligência artificial</i></div>
 </div>'''
     c.palco(ini, fim, corpo)
     c.entra("#q1", tMa - 0.1); c.entra("#q2", tCo - 0.1); c.entra("#q3", tIn - 0.1)
@@ -501,7 +501,7 @@ def main():
     leg = legenda(c, pal, total)
     av = (f'<div id="avw" style="left:{AV["left"]}px;top:{AV["top"]}px;width:{AV["w"]}px;height:{AV["h"]}px;">'
           f'<video id="av" src="assets/avatar.mp4" data-start="0" data-duration="{total:.2f}" data-track-index="9" data-has-audio="true" data-volume="1" playsinline></video>'
-          f'<div class="avtag">NEI MALDANER · INEMA</div></div>')
+          f'<div class="avtag">NEI MALDANER · ARCKHÉ</div></div>')
     html = f'''<!doctype html>
 <html lang="pt-BR" data-resolution="portrait">
 <head><meta charset="UTF-8"/><meta name="viewport" content="width=1080, height=1920"/>
@@ -510,7 +510,7 @@ def main():
 <body>
 <div id="root" data-composition-id="main" data-start="0" data-duration="{total:.2f}" data-width="1080" data-height="1920">
  {"".join(c.html)}
- <div id="topo" class="clip full" data-start="0" data-duration="{total:.2f}" data-track-index="8"><div id="marca">INEMA <span>· EVENTOS EXTREMOS</span></div><div id="fonte">{FONTE}</div></div>
+ <div id="topo" class="clip full" data-start="0" data-duration="{total:.2f}" data-track-index="8"><div id="marca">ARCKHÉ <span>· EVENTOS EXTREMOS</span></div><div id="fonte">{FONTE}</div></div>
  {av}
  <div id="legenda" class="clip full" data-start="0" data-duration="{total:.2f}" data-track-index="10">{leg}</div>
 </div>

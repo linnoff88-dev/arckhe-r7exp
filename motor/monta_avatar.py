@@ -3,13 +3,13 @@
 
 Uso: motor/monta_avatar.py <pasta-do-completo> <versao>
 Ordem: abertura da versêo → caminhos (na ordem da ficha) → final. Cada fala: loudnorm -14 LUFS + 0,5 s de respiro.
-Saída: build/avatar-<v>.mp4, build/segmentos-<v>.json, tempos/<fala>.json (whisper large-v3 do inemavox, uma vez por fala).
+Saída: build/avatar-<v>.mp4, build/segmentos-<v>.json, tempos/<fala>.json (whisper large-v3 do ARCKHÉvox, uma vez por fala).
 """
 import json, subprocess, sys
 from pathlib import Path
 import yaml
 
-VOX = Path.home() / "projetos/inemavox"
+VOX = Path.home() / "projetos/ARCKHÉvox"
 PY = VOX / "venv/bin/python"
 RESPIRO = 0.5
 

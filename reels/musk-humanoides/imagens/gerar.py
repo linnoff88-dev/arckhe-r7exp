@@ -6,7 +6,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 BASE = ("Use a ferramenta de geraçêo de imagem (image_gen) para criar UMA imagem VERTICAL em RETRATO 9:16 (o maior tamanho "
-        "vertical disponível, 1024x1536 ou próximo). Estilo: fotografia cinematográfica fotorrealista, dramática, luz NEUTRA, "
+        "vertical disponível, 1024x1536 ou próximo). Estilo: fotografia cARCKHÉtográfica fotorrealista, dramática, luz NEUTRA, "
         "balanço de branco neutro: pele natural, NUNCA amarelado, dourado ou sépia, sem cara de CGI nem de desenho. Robô, "
         "quando houver: humanoide realista no estilo do Tesla Optimus, corpo branco e grafite, juntas pretas, cabeça lisa com "
         "visor PRETO brilhante sem rosto, calmo, nada de olho vermelho nem ameaça, nada de cartoon. Todo texto na imagem em "

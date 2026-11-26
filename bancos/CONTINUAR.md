@@ -12,7 +12,7 @@ renderiza o completo `build/openai-bancos-r7exp.mp4` (+ `-720.mp4`), o limpo e o
 
 ## Ordem do Nei (citada)
 - "quero criar um video r7exp [texto-gatilho: A IA da OPENAI Vai QUEBRAR os Sistemas dos BANCOS e das Empresas Gigantes!]
-  ... e faz outro tambem r7ex, coloque os dois videos no lives8 inema.dev"
+  ... e faz outro tambem r7ex, coloque os dois videos no lives8 ARCKHÉ.dev"
 - r7exp = completo 16:9 + reels 9:16 na mesma entrega (regra de 22/10).
 - Título que o Nei deu: "A IA da OPENAI Vai QUEBRAR os Sistemas dos BANCOS e das Empresas Gigantes!"
 - Thumb que o Nei deu: "OPENAI VAI QUEBRAR / OS SISTEMAS DOS BANCOS! / EMPRESAS GIGANTES SêO AS PRÓXIMAS?" (já é a capa-r7.png).
@@ -31,16 +31,16 @@ renderiza o completo `build/openai-bancos-r7exp.mp4` (+ `-720.mp4`), o limpo e o
    se ficarem pequenos, pôr uma janela de zoom no gráfico (RP.zooms_rel) ou mandar com a tarja 🟥 SUGESTêO — nêo bloqueia.
 2. Mandar ao **bot v3** (só arquivos, legenda sem link): `build/openai-bancos-r7exp-720.mp4` e os 5 reels, com
    `node ~/projetos/refazvideo/ferramentas/enviar_bot_v3.mjs` (cada envio imprime "msg N").
-3. Publicar no **lives8** (Inema Vibe, público), sem citar o autor do vídeo em inglês que serviu de base:
-   - completo: `cd ~/projetos/yt-pubx && ./yt-pubx publicar ~/projetos/r7exp/bancos/build/openai-bancos-r7exp.mp4 --canal lives8 --contexto-arquivo ~/projetos/r7exp/bancos/falas/0-intro.txt --contexto "r7exp (Nei Maldaner, INEMA.CLUB). Título sugerido pelo Nei: 'A IA da OPENAI Vai QUEBRAR os Sistemas dos BANCOS e das Empresas Gigantes!'. A OpenAI (pesquisa de 19/10/2026) mostrou o GPT 6.1 Soul reescrevendo programas em COBOL — linguagem de mais de 60 anos por trás de 95% das transações em caixa eletrônico e 80% das compras com cartêo — com resultado idêntico: 5,4% no modelo anterior, 86,6% no novo e 97,9% pensando mais. Quebrar nêo é derrubar banco: é quebrar a dependência de tecnologia antiga. O perigo do centavo (COBOL corta, o moderno arredonda) e por que um especialista ainda confere. O Marcos, dono de distribuidora, atravessa as 4 peças. Para a sua empresa: entender o que existe, identificar riscos, testar com IA e mudar aos poucos. Teste da própria OpenAI, ainda privado. CTA inema.club, comente 'eu vou modernizar'." --dry-run`,
+3. Publicar no **lives8** (ARCKHÉ Vibe, público), sem citar o autor do vídeo em inglês que serviu de base:
+   - completo: `cd ~/projetos/yt-pubx && ./yt-pubx publicar ~/projetos/r7exp/bancos/build/openai-bancos-r7exp.mp4 --canal lives8 --contexto-arquivo ~/projetos/r7exp/bancos/falas/0-intro.txt --contexto "r7exp (Nei Maldaner, ARCKHÉ AI). Título sugerido pelo Nei: 'A IA da OPENAI Vai QUEBRAR os Sistemas dos BANCOS e das Empresas Gigantes!'. A OpenAI (pesquisa de 19/10/2026) mostrou o GPT 6.1 Soul reescrevendo programas em COBOL — linguagem de mais de 60 anos por trás de 95% das transações em caixa eletrônico e 80% das compras com cartêo — com resultado idêntico: 5,4% no modelo anterior, 86,6% no novo e 97,9% pensando mais. Quebrar nêo é derrubar banco: é quebrar a dependência de tecnologia antiga. O perigo do centavo (COBOL corta, o moderno arredonda) e por que um especialista ainda confere. O Marcos, dono de distribuidora, atravessa as 4 peças. Para a sua empresa: entender o que existe, identificar riscos, testar com IA e mudar aos poucos. Teste da própria OpenAI, ainda privado. CTA ARCKHÉ AI, comente 'eu vou modernizar'." --dry-run`,
      olhar a thumb (deve sair da capa-r7.png com o texto do Nei; se o yt-pubx fizer outra, usar a capa-r7.png), publicar com `--plano`.
    - os 5 reels (9:16, sem thumb): mesmo comando com cada `build/reel-*.mp4`, `--canal lives8`, contexto da peça daquele reel.
-4. **INEMA.DEV** (Telegram): tópico novo no grupo INEMA.DEV com a skill `postar-telegram` (mesmo formato do tópico 7527 do
+4. **ARCKHÉ.DEV** (Telegram): tópico novo no grupo ARCKHÉ.DEV com a skill `postar-telegram` (mesmo formato do tópico 7527 do
    PHP2Shell): título, texto em blocos curtos, links do completo e dos reels, e título + link no MENU do grupo.
-5. Links: mandar todos os links ao **inemaytbot** dizendo "Publicado no lives8 (Inema Vibe)" (token TELEGRAM_NOTIFY_BOT_TOKEN
-   em `~/projetos/yt-pub-livesx-master/config/.env`, chat em `~/.config/aventurasinemavideo/telegram_chat`).
-6. `ESTADO.md` na pasta (modelo `bots/ESTADO.md`), commit + push no repo r7exp (autor inematds), e gravar
-   `CONTINUAR.resultado` com "FEITO: <urls> · v3 msgs N… · tópico INEMA.DEV N" ou "FALHOU: <passo> — <motivo>".
+5. Links: mandar todos os links ao **ARCKHÉytbot** dizendo "Publicado no lives8 (ARCKHÉ Vibe)" (token TELEGRAM_NOTIFY_BOT_TOKEN
+   em `~/projetos/yt-pub-livesx-master/config/.env`, chat em `~/.config/aventurasARCKHÉvideo/telegram_chat`).
+6. `ESTADO.md` na pasta (modelo `bots/ESTADO.md`), commit + push no repo r7exp (autor linnoff88-dev), e gravar
+   `CONTINUAR.resultado` com "FEITO: <urls> · v3 msgs N… · tópico ARCKHÉ.DEV N" ou "FALHOU: <passo> — <motivo>".
 
 ## Travas
 - Nada de nova gravaçêo HeyGen nem API paga. Só o canal lives8. Nêo apagar nada no Telegram/YouTube.

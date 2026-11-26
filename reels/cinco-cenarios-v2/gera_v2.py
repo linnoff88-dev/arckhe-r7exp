@@ -59,7 +59,7 @@ def corta():
     pal = []
     for x in w:
         wd = CORRIGE.get(x["word"].strip(), x["word"].strip())
-        if pal and wd and not wd[:1].isalnum():          # whisper separa "ex -funcionário", "inema .club", "19 %"
+        if pal and wd and not wd[:1].isalnum():          # whisper separa "ex -funcionário", "ARCKHÉ .club", "19 %"
             pal[-1]["word"] += wd
             continue
         pal.append({"word": wd, "t": round(x["start"], 2), "sec": None})
@@ -353,7 +353,7 @@ def main():
                   for j, k in enumerate(ORDEM))
     fim_html = (f'<h2 style="top:240px;font-size:120px;color:#fff">QUAL FUTURO</h2><h2 style="top:370px;font-size:120px;color:#FACC15">VOCÊ ESCOLHE?</h2>'
                 f'<div class="lista">{lis}</div>'
-                f'<div class="sub" id="fsub" style="top:1260px">comenta aqui o seu caminho<br><span class="pill">playlist 5 futuros no canal</span><br><span style="font-size:40px;color:#FACC15">inema.club · kit aberto e gratuito</span></div>')
+                f'<div class="sub" id="fsub" style="top:1260px">comenta aqui o seu caminho<br><span class="pill">playlist 5 futuros no canal</span><br><span style="font-size:40px;color:#FACC15">ARCKHÉ AI · kit aberto e gratuito</span></div>')
     for j in range(5):
         J.a(f'tl.to("#fl{j}", {{opacity:1, duration:0.25}}, {dur + 0.1 + j * 0.25:.2f});')
     J.a(f'tl.to("#fsub", {{opacity:1, duration:0.3}}, {dur + 1.5:.2f});')
@@ -365,7 +365,7 @@ def main():
 <style>{CSS}</style></head>
 <body>
 <div id="root" data-composition-id="main" data-start="0" data-duration="{total:.2f}" data-width="1080" data-height="1920">
- <div id="hdr" class="clip" data-start="0" data-duration="{dur:.2f}" data-track-index="1"><div class="marca">INEMA <span>· 5 FUTUROS</span></div>{"".join(hh)}</div>
+ <div id="hdr" class="clip" data-start="0" data-duration="{dur:.2f}" data-track-index="1"><div class="marca">ARCKHÉ <span>· 5 FUTUROS</span></div>{"".join(hh)}</div>
  <div id="graf" class="clip" data-start="0" data-duration="{dur:.2f}" data-track-index="2">{"".join(v)}</div>
  <div id="banda" class="clip" data-start="0" data-duration="{dur:.2f}" data-track-index="5">{"".join(bh)}<div class="sombra"></div>{"".join(tg)}</div>
  <div id="avw"><video id="av" src="assets/av.mp4" data-start="0" data-duration="{dur:.2f}" data-track-index="4" data-has-audio="true" data-volume="1" playsinline></video></div>

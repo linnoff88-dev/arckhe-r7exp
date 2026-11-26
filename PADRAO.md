@@ -8,7 +8,7 @@
 | personagem | uma pessoa fixa (nome, idade, roupa) que aparece em todas as opções |
 | opções | 3–6; para cada uma: O QUE É · COMO VOCÊ VIVE · O QUE LEVA ATÉ LÁ (com fonte) |
 | açêo | o que a pessoa pode fazer, cada açêo ligada a uma alavanca no mapa |
-| destino | página do inema.club |
+| destino | página do ARCKHÉ AI |
 
 ## 1b. Tom da fala — emoçêo primeiro, a verdade confirma (Nei, 21/10/2026)
 "Temos nossa ética, que entende o povo e nêo a máquina; nêo podemos faltar com a verdade, mas ela vem depois para
@@ -29,7 +29,7 @@ confirmar e nêo impor; a emoçêo vem primeiro, senêo nêo atingimos nunca o r
    → como se chega lá (diagrama de causa) → volta ao mapa.
 4. **Comparaçêo**: todas as versões da personagem lado a lado.
 5. **O que fazer**: ações empurrando a curva para cima, ao vivo.
-6. **CTA** inema.club + pergunta.
+6. **CTA** ARCKHÉ AI + pergunta.
 
 ## 3. Reels que saem do completo
 - Um reel por opçêo (o bloco 3 em 9:16, 35–60 s), sempre terminando com "existem outros N caminhos".

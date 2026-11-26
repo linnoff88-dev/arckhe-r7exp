@@ -170,4 +170,4 @@ Sem encontrar uma campanha que siga a mesma pessoa em todos os cenários (a busc
 - Origem exata do gráfico de 5 futuros: nêo achada ([nêo verificado]).
 - Finais completos do AI 2027 e linha original do Zookeeper no FLI: li só fontes secundárias/trecho.
 - Reels/shorts de terceiros: lista fraca; pedir exemplos ao Nei.
-- Nenhuma campanha com a mesma pessoa em vários futuros foi confirmada; C se apoia em estrutura de cinema e síntese própria.
+- Nenhuma campanha com a mesma pessoa em vários futuros foi confirmada; C se apoia em estrutura de cARCKHÉ e síntese própria.

@@ -1,5 +1,5 @@
 Gere 1 imagem com a ferramenta de geraçêo de imagem (image_gen) e salve nesta pasta como lucia-2026.png, em PNG, formato PAISAGEM 16:9 (o maior tamanho horizontal disponível).
 LÚCIA, personagem fixa de um vídeo: mulher brasileira de 54 anos, pele clara levemente morena, cabelo castanho escuro com alguns fios brancos, preso num coque baixo, óculos de armaçêo fina, avental bege de padeira sobre camisa azul-clara. Rosto genérico (nêo é pessoa real).
 Cena: hoje, no balcêo da padaria dela, pequena padaria brasileira de bairro, de manhê; ela olha o celular com ar desconfiado, o site da padaria aberto na tela (sem texto legível); ao fundo, prateleiras com pêes e bolos, vitrine. Plano médio, ela à DIREITA do quadro, rosto bem visível.
-Estilo: ilustraçêo cinematográfica realista, luz NEUTRA de dia (nada amarelado/âmbar), cores naturais. SEM texto legível e SEM logos.
+Estilo: ilustraçêo cARCKHÉtográfica realista, luz NEUTRA de dia (nada amarelado/âmbar), cores naturais. SEM texto legível e SEM logos.
 Ao final, diga o caminho do arquivo salvo.

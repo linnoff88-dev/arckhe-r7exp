@@ -3,7 +3,7 @@
 # Uso: completo/avatar.sh enviar | baixar      (ids em completo/avatar/<nome>.id, vídeos em completo/avatar/<nome>.mp4)
 set -u
 AQUI="$(cd "$(dirname "$0")" && pwd)"; HG="$HOME/projetos/r7ex/heygen"
-PERFIL="$HOME/.cache/inemaccbot/perfil-heygen"; mkdir -p "$AQUI/avatar"
+PERFIL="$HOME/.cache/ARCKHÉccbot/perfil-heygen"; mkdir -p "$AQUI/avatar"
 case "${1:-}" in
   enviar)
     for f in "$AQUI"/falas/*.txt; do

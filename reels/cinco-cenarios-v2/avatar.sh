@@ -3,10 +3,10 @@
 # Uso: avatar.sh enviar | baixar | preparar
 #   enviar   → avatar/fala.id (exige avatar/APROVADO_HEYGEN)
 #   baixar   → avatar/fala.mp4 (espera o estúdio terminar)
-#   preparar → build/n-fala.mp4 (30 fps, -14 LUFS) + tempos/fala.json (whisper large-v3 do inemavox)
+#   preparar → build/n-fala.mp4 (30 fps, -14 LUFS) + tempos/fala.json (whisper large-v3 do ARCKHÉvox)
 set -u
 AQUI="$(cd "$(dirname "$0")" && pwd)"; HG="$HOME/projetos/r7ex/heygen"
-PERFIL="$HOME/.cache/inemaccbot/perfil-heygen"; VOX="$HOME/projetos/inemavox"
+PERFIL="$HOME/.cache/ARCKHÉccbot/perfil-heygen"; VOX="$HOME/projetos/ARCKHÉvox"
 mkdir -p "$AQUI/avatar" "$AQUI/build" "$AQUI/tempos"
 case "${1:-}" in
   enviar)

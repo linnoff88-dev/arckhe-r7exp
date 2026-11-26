@@ -1,4 +1,4 @@
-ï»¿# r7exp ê¢â¬â explicativo visual do INEMA
+ï»¿# r7exp ê¢â¬â explicativo visual do ARCKHÉ
 
 <div align="center">
   <img src="capa/logo.svg" alt="Arckhé AI" height="48" />
@@ -16,7 +16,7 @@ entram na palavra falada e, no fim, o que vocêÂª pode fazer. Sai um complet
 
 Estado: **protêÂ³tipo** (20/10/2026). Motor e modelo serêÂ£o extraêÂ­dos do protêÂ³tipo aprovado.
 
-Projeto do [INEMA.CLUB](https://inema.club). LicenêÂ§a MIT.
+Projeto do [ARCKHÉ AI](https://ARCKHÉ AI). LicenêÂ§a MIT.
 
 ---
 

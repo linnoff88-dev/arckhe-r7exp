@@ -3,7 +3,7 @@
 # Pares: explicavideo ~/projetos/output/ia-ciencia-fisica + r7ex 2026-10-28-ia-prova-nobel e 2026-10-28-ia-derrubou-hipotese.
 # Ordem das falas (aberturas.a → caminhos → final) = a que motor/monta_avatar.py usa; peças em ciencia/gera_ciencia.py.
 slug: ia-ciencia-r7exp
-marca: "INEMA · IA FAZ CIÊNCIA"
+marca: "ARCKHÉ · IA FAZ CIÊNCIA"
 fonte: "OpenAI, anúncio de 26/10/2026 · provas em revisêo por cientistas de fora"
 personagem: "Rafael, 41 anos, professor de matemática do ensino médio (rafael-hoje.png)"
 
@@ -17,4 +17,4 @@ caminhos:
   - {id: C, n: 2, fala: 2-computacao}
   - {id: M, n: 3, fala: 3-matematica}
   - {id: V, n: 4, fala: 4-voce}
-final: {fala: 5-final, url: "https://inema.club"}
+final: {fala: 5-final, url: "https://ARCKHÉ AI"}
