@@ -25,7 +25,7 @@ GX, GY, GS = G.GX, G.GY, G.GS
 VERDE, VERM, AMAR = "#4ade80", "#ff4d4d", "#FACC15"
 #        slug   nome            data      cor        força (2 linhas)                fraco (2 linhas)               para quem
 BOTS = [("grok", "Grok Bot", "11 ago", "#e5e7eb", ("EQUIPE", "DE BOTS"), ("E-MAIL FALHA", "É PAGO"), "EQUIPE DIGITAL"),
-        ("muse", "Meta Muse", "8 set", "#60a5fa", ("LIGA POR", "VOCÊ"), ("MODELO", "NÃO É DE PONTA"), "TELEFONE"),
+        ("muse", "Meta Muse", "8 set", "#60a5fa", ("LIGA POR", "VOCÊ"), ("MODELO", "NêO É DE PONTA"), "TELEFONE"),
         ("dots", "ChatGPT Dots", "29 set", "#2dd4bf", ("USA SUA", "MEMÓRIA"), ("BUGS", "E LENTO"), "MEMÓRIA"),
         ("duet", "Claude Duet", "21 out", "#fb923c", ("O MAIS", "PROATIVO"), ("NAVEGADOR", "FORA DO BRASIL"), "INICIATIVA")]
 TX0, TSTEP, TW, TY, TH = 400, 345, 315, 300, 520
@@ -53,7 +53,7 @@ def mapa_svg(f):
         dots += (f'<circle cx="{cx}" cy="{TY + TH + 70}" r="14" fill="{AMAR}"/>'
                  f'<text x="{cx}" y="{TY + TH + 125}" text-anchor="middle" font-size="30" fill="#c9c9d2">{data}</text>')
     br = (f'<g id="br" opacity="0"><rect x="{TX0 + 3 * TSTEP - 15}" y="{TY - 40}" width="{TW + 30}" height="58" rx="29" fill="{VERM}"/>'
-          f'<text x="{TX0 + 3 * TSTEP + TW / 2}" y="{TY - 1}" text-anchor="middle" font-size="27" fill="#fff" font-weight="800">AINDA NÃO NO BRASIL</text></g>')
+          f'<text x="{TX0 + 3 * TSTEP + TW / 2}" y="{TY - 1}" text-anchor="middle" font-size="27" fill="#fff" font-weight="800">AINDA NêO NO BRASIL</text></g>')
     return f'''
 <svg id="mapa" width="1920" height="1080" viewBox="0 0 1920 1080">
  <g transform="translate({GX},{GY}) scale({GS})">
@@ -73,7 +73,7 @@ def mapa_svg(f):
 
 class Cena(P.Cena):
     def zoom_tile(self, t, i, z=1.08):
-        # origem presa à esquerda: o quadro cresce para a direita e não entra sob o PiP do avatar (canto inferior esquerdo)
+        # origem presa à esquerda: o quadro cresce para a direita e nêo entra sob o PiP do avatar (canto inferior esquerdo)
         x0 = GX + TX0 * GS
         cx = min(GX + (TX0 + i * TSTEP + TW / 2) * GS, (x0 * z - 380) / (z - 1))
         self.a(f'tl.to("#cam", {{scale:{z}, transformOrigin:"{cx:.0f}px {gy(TY + TH / 2):.0f}px", duration:1.4, ease:"power2.inOut"}}, {t:.2f});')
@@ -119,7 +119,7 @@ class Cena(P.Cena):
             t = t or tprev + 1.0
             self.a(f'tl.fromTo("#{j}", {{opacity:0, x:40}}, {{opacity:1, x:0, duration:0.45}}, {t - 0.1:.2f});')
             tprev = t
-        # mapa: os 4 blocos; o Duet ganha a etiqueta "ainda não no Brasil"
+        # mapa: os 4 blocos; o Duet ganha a etiqueta "ainda nêo no Brasil"
         self.a(f'tl.fromTo("#ticks", {{opacity:0}}, {{opacity:1, duration:0.6}}, {tg:.2f});')
         self.a(f'tl.fromTo("#eixos", {{opacity:0}}, {{opacity:1, duration:0.4}}, {tg:.2f});')
         self.a(f'tl.fromTo(".tile", {{opacity:0, y:30}}, {{opacity:1, y:0, duration:0.45, stagger:0.15}}, {tg + 0.1:.2f});')
@@ -245,14 +245,14 @@ def main():
     cena.bot(falas[ordem[2]], 1, ini[3], "gratuito", "Liga para empresas",
              [("gratuito", "🆓", "gratuito"), ("visual", "✨", "o visual mais caprichado"), ("liga", "📞", "liga para empresas de verdade")],
              "marcou", "muse-carla.png", "CARLA · COM O MUSE",
-             [("poda", "✓ marcou a poda de árvore"), ("negociou", "✓ negociou a conta de TV"), ("linha", "✓ não espera mais na linha")], "ponto")
+             [("poda", "✓ marcou a poda de árvore"), ("negociou", "✓ negociou a conta de TV"), ("linha", "✓ nêo espera mais na linha")], "ponto")
     cena.bot(falas[ordem[3]], 2, ini[4], "mora", "Mora no ChatGPT",
              [("mora", "🏠", "dentro do ChatGPT"), ("memoria", "🧠", "já conhece a sua memória"), ("ensinar", "📚", "nada de novo para ensinar")],
-             "carla", "dots-carla.png", "CARLA · COM O DOTS", [("clientes", "✓ já sabe quem são os clientes")], "problema")
+             "carla", "dots-carla.png", "CARLA · COM O DOTS", [("clientes", "✓ já sabe quem sêo os clientes")], "problema")
     cena.bot(falas[ordem[4]], 3, ini[5], "proativo", "O mais proativo",
              [("proativo", "⚡", "busca trabalho sozinho"), ("horas", "⏰", "olha e-mail e agenda a cada 3 h"), ("traz", "📥", "traz o trabalho até você")],
              "monta", "duet-carla.png", "CARLA · COM O DUET",
-             [("resumo", "✓ resumo da manhã"), ("escreve", "✓ aprende como ela escreve"), ("organizado", "✓ acorda com o dia organizado")], "trava")
+             [("resumo", "✓ resumo da manhê"), ("escreve", "✓ aprende como ela escreve"), ("organizado", "✓ acorda com o dia organizado")], "trava")
     cena.final(falas[ordem[5]], total)
     pal = []
     for s in seg["segmentos"]:

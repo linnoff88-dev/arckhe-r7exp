@@ -177,10 +177,10 @@
     {
       "start": 8.64,
       "end": 9.88,
-      "text": "Então, o que fazer hoje?",
+      "text": "Entêo, o que fazer hoje?",
       "words": [
         {
-          "word": "Então,",
+          "word": "Entêo,",
           "start": 8.64,
           "end": 9.04
         },
@@ -345,10 +345,10 @@
     {
       "start": 18.42,
       "end": 20.38,
-      "text": "Simulação e robótica são o próximo salto.",
+      "text": "Simulaçêo e robótica sêo o próximo salto.",
       "words": [
         {
-          "word": "Simulação",
+          "word": "Simulaçêo",
           "start": 18.42,
           "end": 18.9
         },
@@ -363,7 +363,7 @@
           "end": 19.34
         },
         {
-          "word": "são",
+          "word": "sêo",
           "start": 19.34,
           "end": 19.52
         },
@@ -419,7 +419,7 @@
     {
       "start": 22.64,
       "end": 24.14,
-      "text": "E não só a usar ferramentas.",
+      "text": "E nêo só a usar ferramentas.",
       "words": [
         {
           "word": "E",
@@ -427,7 +427,7 @@
           "end": 22.92
         },
         {
-          "word": "não",
+          "word": "nêo",
           "start": 22.92,
           "end": 23.02
         },
@@ -456,10 +456,10 @@
     {
       "start": 24.32,
       "end": 28.24,
-      "text": "Intenção, contexto, agentes, validação e supervisão.",
+      "text": "Intençêo, contexto, agentes, validaçêo e supervisêo.",
       "words": [
         {
-          "word": "Intenção,",
+          "word": "Intençêo,",
           "start": 24.32,
           "end": 24.8
         },
@@ -474,7 +474,7 @@
           "end": 26.48
         },
         {
-          "word": "validação",
+          "word": "validaçêo",
           "start": 26.56,
           "end": 27.36
         },
@@ -484,7 +484,7 @@
           "end": 27.66
         },
         {
-          "word": "supervisão.",
+          "word": "supervisêo.",
           "start": 27.66,
           "end": 28.24
         }
@@ -493,10 +493,10 @@
     {
       "start": 28.24,
       "end": 30.0,
-      "text": "Não basta usar a inteligência artificial.",
+      "text": "Nêo basta usar a inteligência artificial.",
       "words": [
         {
-          "word": "Não",
+          "word": "Nêo",
           "start": 28.24,
           "end": 28.68
         },

@@ -180,7 +180,7 @@
   {
     "start": 14.14,
     "end": 17.24,
-    "text": "Uma inteligência artificial tão poderosa que decide tudo.",
+    "text": "Uma inteligência artificial têo poderosa que decide tudo.",
     "words": [
       {
         "word": "Uma",
@@ -198,7 +198,7 @@
         "end": 15.52
       },
       {
-        "word": "tão",
+        "word": "têo",
         "start": 15.52,
         "end": 15.96
       },
@@ -227,7 +227,7 @@
   {
     "start": 17.46,
     "end": 18.76,
-    "text": "Ela não nos destrói.",
+    "text": "Ela nêo nos destrói.",
     "words": [
       {
         "word": "Ela",
@@ -235,7 +235,7 @@
         "end": 17.78
       },
       {
-        "word": "não",
+        "word": "nêo",
         "start": 17.78,
         "end": 18.04
       },
@@ -671,7 +671,7 @@
   {
     "start": 55.34,
     "end": 56.74,
-    "text": "Conforto não é liberdade.",
+    "text": "Conforto nêo é liberdade.",
     "words": [
       {
         "word": "Conforto",
@@ -679,7 +679,7 @@
         "end": 55.94
       },
       {
-        "word": "não",
+        "word": "nêo",
         "start": 55.94,
         "end": 56.04
       },

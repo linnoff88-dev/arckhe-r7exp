@@ -41,7 +41,7 @@
     {
       "start": 1.78,
       "end": 3.42,
-      "text": "inteiro subir um milímetro, são",
+      "text": "inteiro subir um milímetro, sêo",
       "words": [
         {
           "word": "inteiro",
@@ -64,7 +64,7 @@
           "end": 2.96
         },
         {
-          "word": "são",
+          "word": "sêo",
           "start": 3.06,
           "end": 3.42
         }

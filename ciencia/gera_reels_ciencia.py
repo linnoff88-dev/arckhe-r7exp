@@ -20,7 +20,7 @@ MARCA = "IA FAZ CIÊNCIA"
 
 CASOS = [  # id, fala, nome curto (≤ 18), cor, banda [(palavra-âncora | 0, imagem, rótulo)]
     ("F", "1-fisica", "FÍSICA · 1954", "#60a5fa", [(0, "rafael-hoje.png", "O RAFAEL · PROFESSOR"), ("rafael", "fisica-rafael.png", "UM NOBEL CONFERE A IA")]),
-    ("C", "2-computacao", "COMPUTAÇÃO · 1999", "#c084fc", [(0, "rafael-hoje.png", "O RAFAEL · PROFESSOR"), ("rafael", "computacao-rafael.png", "A HIPÓTESE CAIU")]),
+    ("C", "2-computacao", "COMPUTAÇêO · 1999", "#c084fc", [(0, "rafael-hoje.png", "O RAFAEL · PROFESSOR"), ("rafael", "computacao-rafael.png", "A HIPÓTESE CAIU")]),
     ("M", "3-matematica", "MATEMÁTICA · 1917", "#fb923c", [(0, "rafael-hoje.png", "O RAFAEL · PROFESSOR"), ("rafael", "matematica-rafael.png", "TODAS AS DIMENSÕES")]),
     ("V", "4-voce", "E VOCÊ?", "#FACC15", [(0, "rafael-hoje.png", "O RAFAEL · PROFESSOR"), ("rafael", "voce-rafael.png", "TER CRITÉRIO")]),
 ]

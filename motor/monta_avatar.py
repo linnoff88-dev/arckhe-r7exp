@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Junta as falas do avatar de uma versão num só vídeo e transcreve cada fala (tempo por palavra).
+"""Junta as falas do avatar de uma versêo num só vídeo e transcreve cada fala (tempo por palavra).
 
 Uso: motor/monta_avatar.py <pasta-do-completo> <versao>
-Ordem: abertura da versão → caminhos (na ordem da ficha) → final. Cada fala: loudnorm -14 LUFS + 0,5 s de respiro.
+Ordem: abertura da versêo → caminhos (na ordem da ficha) → final. Cada fala: loudnorm -14 LUFS + 0,5 s de respiro.
 Saída: build/avatar-<v>.mp4, build/segmentos-<v>.json, tempos/<fala>.json (whisper large-v3 do inemavox, uma vez por fala).
 """
 import json, subprocess, sys

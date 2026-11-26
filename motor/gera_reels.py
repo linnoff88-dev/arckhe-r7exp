@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Reels 9:16 tirados do completo (PADRAO §3): um por caminho + o reel-índice.
 
-Faixas (1080x1920, D17 — Nei 22/10/2026): os 2/3 de cima são do conteúdo — título (0-170) · explicativo 16:9 limpo
+Faixas (1080x1920, D17 — Nei 22/10/2026): os 2/3 de cima sêo do conteúdo — título (0-170) · explicativo 16:9 limpo
 (170-778) · imagem de impacto da personagem (778-1280) — e o avatar fica no TERÇO DE BAIXO (1280-1920) o reel inteiro.
 Quadro 0 = capa nos 2/3 de cima (imagem de impacto + título grande), parada até o fim da 1ª frase; o avatar já aparece embaixo.
 Legenda karaokê no pé dos 2/3 (fora do rosto e acima da interface do Shorts/Reels).
-No fim, cartão "existem outros 4 caminhos" (caminho) ou "qual é o seu?" (índice).
+No fim, cartêo "existem outros 4 caminhos" (caminho) ou "qual é o seu?" (índice).
 
 Uso: python3 motor/gera_reels.py completo [--so E,Z]
 Precisa de: reels/limpo-a.mp4 e reels/limpo-b.mp4 (gera.py <pasta> a|b limpo), build/n-<fala>.mp4, tempos/<fala>.json.
@@ -22,7 +22,7 @@ W, H = 1080, 1920
 Y_EXP, H_EXP = 170, 608
 Y_IMG, H_IMG = 778, 502       # imagem de impacto
 Y_AV, H_AV = 1280, 640        # avatar: terço de baixo, o reel inteiro (D17)
-FIM = 3.5          # cartão final (sem fala)
+FIM = 3.5          # cartêo final (sem fala)
 
 # imagens da Ana em 2040 por caminho (a de 2026 abre todos)
 FOTOS = {"E": ["extincao-casa.png", "extincao-corrida.png"], "Z": ["ana-2040-zoo.png", "ana-2040-vidro.png"],
@@ -121,8 +121,8 @@ def monta(pasta, slug, *, marca="5 FUTUROS", chip, nome, cor, fala, exp, exp_ini
           zooms=(), titulo=None, capa_pronta=False):
     """banda = [(t_ini, img, rotulo, cor_rotulo)]; troca com dissolve e zoom lento (≤1,08).
     Quadro 0 (D17): capa nos 2/3 de cima = `capa` (imagem de impacto do caso; sem ela, a última da banda) + `titulo`
-    (≤ 4 palavras, <b>…</b> fica amarelo; sem ele, `nome`), até `capa_ate` (padrão: fim da 1ª frase).
-    `capa_pronta=True`: a imagem já traz o título desenhado (capa do Codex) — não sobrepõe texto."""
+    (≤ 4 palavras, <b>…</b> fica amarelo; sem ele, `nome`), até `capa_ate` (padrêo: fim da 1ª frase).
+    `capa_pronta=True`: a imagem já traz o título desenhado (capa do Codex) — nêo sobrepõe texto."""
     out = pasta / "reels" / slug
     a = out / "assets"
     (a / "fonts").mkdir(parents=True, exist_ok=True)
@@ -208,7 +208,7 @@ def t_palavra(w, alvo, depois=0.0):
     for x in w:
         if x["start"] >= depois and norm(x["word"]).startswith(alvo):
             return x["start"]
-    raise SystemExit(f"palavra não achada: {alvo}")
+    raise SystemExit(f"palavra nêo achada: {alvo}")
 
 
 def main():

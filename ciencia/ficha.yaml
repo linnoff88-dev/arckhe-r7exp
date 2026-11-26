@@ -4,7 +4,7 @@
 # Ordem das falas (aberturas.a → caminhos → final) = a que motor/monta_avatar.py usa; peças em ciencia/gera_ciencia.py.
 slug: ia-ciencia-r7exp
 marca: "INEMA · IA FAZ CIÊNCIA"
-fonte: "OpenAI, anúncio de 26/10/2026 · provas em revisão por cientistas de fora"
+fonte: "OpenAI, anúncio de 26/10/2026 · provas em revisêo por cientistas de fora"
 personagem: "Rafael, 41 anos, professor de matemática do ensino médio (rafael-hoje.png)"
 
 mapa:

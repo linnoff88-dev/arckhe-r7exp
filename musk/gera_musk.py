@@ -142,7 +142,7 @@ class Cena(G.Cena):
         self.a(f'tl.to("#{i}", {{opacity:0, duration:0.4}}, {fim - 0.4:.2f});')
 
     def lista_verde(self, F, chip, itens, ini, fim, fecho=None, track=6, cor="#4ade80"):
-        """multidão de pontos cinza; um sai amarelo; à direita os itens; fecho em 2 linhas, cada uma na sua palavra"""
+        """multidêo de pontos cinza; um sai amarelo; à direita os itens; fecho em 2 linhas, cada uma na sua palavra"""
         inner = self.id("in")
         pts = ""
         for r in range(9):
@@ -191,7 +191,7 @@ class Cena(G.Cena):
 
     # ------------------------------------------------------------ abertura
     def abertura(self, F):
-        t_capa = F.t("sou") - 0.4                        # capa parada a 1ª frase inteira (até "Não sou eu")
+        t_capa = F.t("sou") - 0.4                        # capa parada a 1ª frase inteira (até "Nêo sou eu")
         inner = self.id("in")
         self.clip(0, t_capa + 0.6, f'<div class="in" id="{inner}" style="opacity:1"><img class="foto" id="{inner}f" src="assets/capa.png" alt="capa"/></div>', 3)
         self.a(f'tl.fromTo("#{inner}f", {{scale:0.93, transformOrigin:"0% 0%"}}, {{scale:0.95, transformOrigin:"0% 0%", duration:{t_capa + 0.6:.2f}, ease:"none"}}, 0);')
@@ -200,7 +200,7 @@ class Cena(G.Cena):
         tg = F.t("grafico")
         self.abre_meia(tg)                               # avatar em meia tela da capa até o gráfico
         self.a(f'tl.set(["#marca","#fonte"], {{opacity:0}}, 0); tl.to("#marca", {{opacity:1, duration:0.5}}, {t_capa:.2f}); tl.to("#fonte", {{opacity:1, duration:0.5}}, {tg:.2f});')
-        # cartão da entrevista (metade esquerda, avatar à direita)
+        # cartêo da entrevista (metade esquerda, avatar à direita)
         F.cur = t_capa - F.ini
         i2 = self.id("in")
         corpo = (f'<div class="in opaque" id="{i2}"><div class="mus"><div class="chip" style="background:rgba(250,204,21,.16);color:#FACC15">A ENTREVISTA</div>'
@@ -258,7 +258,7 @@ class Cena(G.Cena):
         tv2 = F.t("20"); tdg = F.t("degrau")
         i = self.id("bn")
         corpo = (f'<div class="card bign" id="{i}" style="border-color:#38bdf855"><span class="chip" style="background:#38bdf82e;color:#38bdf8">ESTIMATIVA DO MUSK</span>'
-                 f'<div class="num" style="color:#38bdf8;font-size:96px">+20% a 30%</div><div class="sub">na produção da economia</div>'
+                 f'<div class="num" style="color:#38bdf8;font-size:96px">+20% a 30%</div><div class="sub">na produçêo da economia</div>'
                  f'<div class="cbar"><span>HOJE</span><div class="b1" style="background:#9a9aa6"></div></div>'
                  f'<div class="cbar"><span>COM IA DIGITAL</span><div class="b2" style="background:#38bdf8"></div></div>'
                  f'<div class="alerta" id="{i}a">sem cronograma verificável</div></div>')
@@ -276,7 +276,7 @@ class Cena(G.Cena):
                         ("empresas", "EMPRESAS QUE APRENDEM", "→ +20% a 30%")], "digital-agentes.png", tl_ - 0.2, tm - 1.0, cor="#38bdf8", nome="IA DIGITAL")
         self.a(f'tl.to("#degrau", {{opacity:0, duration:0.3}}, {tl_:.2f});')
         F.cur = tm - F.ini - 1.5
-        self.lista_verde(F, "COMO NÃO FICAR PARA TRÁS · IA DIGITAL", [("agentes", "aprenda agora a montar agentes para o seu trabalho")],
+        self.lista_verde(F, "COMO NêO FICAR PARA TRÁS · IA DIGITAL", [("agentes", "aprenda agora a montar agentes para o seu trabalho")],
                          tm - 1.2, prox - 0.1, fecho=[("espera", "Quem espera vira cliente."), ("aprende", "Quem aprende vira dono.")])
 
     # ------------------------------------------------------------ caminho 2: robôs
@@ -289,26 +289,26 @@ class Cena(G.Cena):
         tq = F.t("que"); tv = F.t("marcos")
         self.titulo("CAMINHO 2", "ROBÔS", "#FACC15", t0, tv)
         F.cur = tq - F.ini
-        self.card(F, "O QUE É", "#FACC15", "Inteligência com mãos",
+        self.card(F, "O QUE É", "#FACC15", "Inteligência com mêos",
                   [("montam", "🦾", "montam, constroem, carregam, consertam"), ("fabricas", "🏭", "fábricas, laboratórios e obras")], tq + 0.3, tv - 0.1)
         tvi = F.t("visao", depois=tv)
         F.cur = tv - F.ini
         self.foto(tv - 0.2, tvi + 0.2, "robos-oficina.png", carimbo="MARCOS · ROBÔS", sub="O MESMO MARCOS")
         F.cur = tv - F.ini
         self.tags(F, [("oleo", "robô troca o óleo"), ("motor", "desmonta o motor"), ("noite", "trabalha a noite inteira"),
-                      ("melhor", "✕ ele já não é o melhor")], tvi + 0.2)
-        # a previsão (frase à esquerda, avatar em meia tela)
+                      ("melhor", "✕ ele já nêo é o melhor")], tvi + 0.2)
+        # a previsêo (frase à esquerda, avatar em meia tela)
         tqt = F.t("quanto", depois=tvi)
         tp = F.t("previsao", depois=tvi)
-        self.quote("A PREVISÃO DO MUSK", "#FACC15", "Humanos deixam de ser os melhores em qualquer trabalho.",
-                   "até nos criativos · é uma previsão, não um fato", tvi - 0.2, tqt + 0.2, img="robos-oficina.png", tsub=tp)
+        self.quote("A PREVISêO DO MUSK", "#FACC15", "Humanos deixam de ser os melhores em qualquer trabalho.",
+                   "até nos criativos · é uma previsêo, nêo um fato", tvi - 0.2, tqt + 0.2, img="robos-oficina.png", tsub=tp)
         # quanto muda: contador até ×1.000.000 no mapa inteiro
         tl_ = F.t("leva", depois=tqt)
         F.cur = tqt - F.ini
         tmi = F.t("milhao"); tdi = F.t("dinheiro")
         i = self.id("bn")
         corpo = (f'<div class="card bign" id="{i}" style="border-color:#FACC1555"><span class="chip" style="background:#FACC152e;color:#FACC15">ESTIMATIVA DO MUSK</span>'
-                 f'<div class="num" style="color:#FACC15">×<i id="{i}n" style="font-style:normal">1</i></div><div class="sub">até um milhão de vezes a economia de hoje, com robôs + espaço</div>'
+                 f'<div class="num" style="color:#FACC15">×<i id="{i}n" style="font-style:normal">1</i></div><div class="sub">até um milhêo de vezes a economia de hoje, com robôs + espaço</div>'
                  f'<div class="alerta" id="{i}a">se hoje fosse 1 cm, isso seria 10 km · especulativo, sem cronograma</div></div>'
                  f'<div class="pills" id="{i}p"><div>💰 dinheiro perde peso</div><div>💼 emprego perde peso</div></div>')
         self.clip(tqt, tl_ + 0.1, corpo, 4, cls="full")
@@ -322,10 +322,10 @@ class Cena(G.Cena):
         # o que leva até lá
         tm = F.t("tras", depois=tl_)
         F.cur = tl_ - F.ini
-        self.cadeia(F, [("producao", "PRODUÇÃO AUTOMATIZADA", "robôs que fazem robôs"), ("energia", "ENERGIA DO SOL", "captada no espaço"),
-                        ("recursos", "RECURSOS DE FORA DA TERRA", "→ até ×1.000.000")], "robos-espaco.png", tl_ - 0.2, tm - 1.0, cor="#FACC15", nome="NA VISÃO DELE")
+        self.cadeia(F, [("producao", "PRODUÇêO AUTOMATIZADA", "robôs que fazem robôs"), ("energia", "ENERGIA DO SOL", "captada no espaço"),
+                        ("recursos", "RECURSOS DE FORA DA TERRA", "→ até ×1.000.000")], "robos-espaco.png", tl_ - 0.2, tm - 1.0, cor="#FACC15", nome="NA VISêO DELE")
         F.cur = tm - F.ini - 1.5
-        self.lista_verde(F, "COMO NÃO FICAR PARA TRÁS · ROBÔS", [("aprende", "entenda como um robô aprende"),
+        self.lista_verde(F, "COMO NêO FICAR PARA TRÁS · ROBÔS", [("aprende", "entenda como um robô aprende"),
                                                                   ("simulador", "do real para o simulador, e de volta (Real2Sim)")],
                          tm - 1.2, prox - 0.1, fecho=[("entende", "Quem entende o robô"), ("dirige", "dirige o robô.")])
 
@@ -338,7 +338,7 @@ class Cena(G.Cena):
         self.titulo("O RISCO", "ELE MESMO ADMITE", "#ff4d4d", t0, tc)
         ta = F.t("aposta", depois=tc)
         F.cur = tc - F.ini - 0.2
-        self.cadeia(F, [("corrida", "A CORRIDA NÃO PARA", "ele não conseguiria pará-la"), ("influenciar", "ELE ENTROU", "para tentar influenciar"),
+        self.cadeia(F, [("corrida", "A CORRIDA NêO PARA", "ele nêo conseguiria pará-la"), ("influenciar", "ELE ENTROU", "para tentar influenciar"),
                         ("controlar", "CONTROLAR?", "inteligências milhares ou milhões de vezes maiores: improvável")],
                     "risco-corrida.png", tc - 0.2, ta - 0.4, cor="#ff4d4d", nome="O RISCO")
         tl_ = F.t("laboratorios", depois=ta)
@@ -349,7 +349,7 @@ class Cena(G.Cena):
                   ta - 0.2, tl_ - 0.1)
         te = F.t("erro", depois=tl_)
         F.cur = tl_ - F.ini
-        self.foto(tl_ - 0.2, te + 0.2, "aposta-labs.png", carimbo="FISCALIZAÇÃO MÚTUA", sub="A PROPOSTA DELE")
+        self.foto(tl_ - 0.2, te + 0.2, "aposta-labs.png", carimbo="FISCALIZAÇêO MÚTUA", sub="A PROPOSTA DELE")
         F.cur = tl_ - F.ini
         self.tags(F, [("laboratorios", "laboratórios fiscalizando uns aos outros"), ("semana", "reuniões toda semana"),
                       ("antecipado", "acesso antecipado aos modelos rivais"), ("perigo", "✓ achar o perigo antes do lançamento")], te + 0.2)
@@ -357,9 +357,9 @@ class Cena(G.Cena):
         F.cur = te - F.ini
         tg = F.t("garantia")
         self.quote("ELE RECONHECE UM ERRO", "#ff4d4d", "Ficou tempo demais na política, longe das empresas.",
-                   "É uma aposta, não uma garantia.", te - 0.2, tm, tsub=tg - 1.0)
+                   "É uma aposta, nêo uma garantia.", te - 0.2, tm, tsub=tg - 1.0)
         F.cur = tm - F.ini
-        self.lista_verde(F, "E O MARCOS?", [("decide", "não decide essa corrida"), ("assistir", "vai só assistir?"),
+        self.lista_verde(F, "E O MARCOS?", [("decide", "nêo decide essa corrida"), ("assistir", "vai só assistir?"),
                                            ("supervisionar", "ou aprender a supervisionar a máquina")], tm - 0.2, prox - 0.1)
         self.a(f'tl.to("#nev", {{opacity:0, duration:0.4}}, {prox - 0.3:.2f});')
 
@@ -394,8 +394,8 @@ class Cena(G.Cena):
         corpo = f'<div class="in opaque" id="{i2}"><div class="chip" style="position:absolute;left:420px;top:130px;background:rgba(74,222,128,.16);color:#4ade80">O QUE FAZER, HOJE</div><div class="passos">'
         ts = []
         for pal, num, txt in [("agentes", "1", "crie agentes agora: atendimento, vendas, processos"),
-                              ("robos", "2", "prepare-se para os robôs: simulação e Real2Sim"),
-                              ("dirigir", "3", "dirija sistemas: intenção, contexto, agentes, validação, supervisão")]:
+                              ("robos", "2", "prepare-se para os robôs: simulaçêo e Real2Sim"),
+                              ("dirigir", "3", "dirija sistemas: intençêo, contexto, agentes, validaçêo, supervisêo")]:
             j = self.id("p"); corpo += f'<div class="ps" id="{j}"><b>{num}</b><span>{txt}</span></div>'; ts.append((j, F.t(pal)))
         corpo += "</div></div>"
         self.clip(tf, tb + 0.2, corpo, 5)
@@ -404,10 +404,10 @@ class Cena(G.Cena):
         for j, t in ts:
             self.a(f'tl.fromTo("#{j}", {{opacity:0, x:60}}, {{opacity:1, x:0, duration:0.45, ease:"back.out(2)"}}, {t - 0.15:.2f});')
             self.a(f'tl.to("#{j} b", {{backgroundColor:"#4ade80", duration:0.3}}, {t + 0.3:.2f});')
-        # não basta usar (frase à esquerda + avatar em meia tela)
+        # nêo basta usar (frase à esquerda + avatar em meia tela)
         F.cur = tb - F.ini
         tc = F.t("construir"); tes = F.t("escolher"); tla = F.t("lado")
-        self.quote("NÃO BASTA USAR A IA", "#FACC15", "Construir, coordenar e controlar.", "enquanto ainda dá para escolher",
+        self.quote("NêO BASTA USAR A IA", "#FACC15", "Construir, coordenar e controlar.", "enquanto ainda dá para escolher",
                    tb - 0.2, tla - 0.3, img="final-marcos.png", tsub=tes)
         # CTA no mapa: você dirige
         self.mapa_todo(tla - 0.6)

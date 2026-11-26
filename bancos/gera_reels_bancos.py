@@ -57,7 +57,7 @@ def main():
                             ("marcos", "marcos-hoje.png", "O MARCOS · 52 ANOS · DISTRIBUIDORA")])
     lis = "".join(f'<div class="li" id="l{j}"><i style="background:{c[3]}"></i><span style="color:{c[3]}">{c[2]}</span></div>'
                   for j, c in enumerate(CASOS))
-    fim_html = (f'<h2 style="top:240px;font-size:130px;color:#FACC15">BANCOS</h2><h2 style="top:390px;font-size:100px;color:#fff">SÃO SÓ O COMEÇO</h2>'
+    fim_html = (f'<h2 style="top:240px;font-size:130px;color:#FACC15">BANCOS</h2><h2 style="top:390px;font-size:100px;color:#fff">SêO SÓ O COMEÇO</h2>'
                 f'<div class="lista" style="top:600px">{lis}</div>'
                 f'<div class="sub" id="fsub" style="top:1180px">um reel para cada peça<br><span class="pill">vídeo completo no canal</span></div>')
     fim_js = [f'tl.to("#l{j}", {{opacity:1, duration:0.25}}, {t_fim + 0.05 + j * 0.25:.2f});' for j in range(4)]

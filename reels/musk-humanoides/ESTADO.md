@@ -1,9 +1,9 @@
 # ESTADO — reel r7exp 9:16 "Musk: humanoides" (21/10/2026) — v2 COM GRÁFICOS
 
 - v2 (21/10, pedido do Nei "apresenta melhor os dados e gráficos", mesmo avatar): conta em 2 fases (US$ 115 tri FMI → +30% ≈ 145 tri;
-  escala de 10 em 10 com números grandes e carimbo PALPITE DELE), curva cérebro × corpo rotulada "esquema, não é medição" com
+  escala de 10 em 10 com números grandes e carimbo PALPITE DELE), curva cérebro × corpo rotulada "esquema, nêo é mediçêo" com
   pega/monta/constrói acendendo, Marcos com horas por semana (pessoa 44 h × robô 168 h), toneladas visível, plano maior.
-  Revisor: aprovado, impacto 7 (build/revisor.json). v1 guardada em build/*-v1.*. Publicação: ver ~/projetos/output/musk-humanoides/STATUS.txt.
+  Revisor: aprovado, impacto 7 (build/revisor.json). v1 guardada em build/*-v1.*. Publicaçêo: ver ~/projetos/output/musk-humanoides/STATUS.txt.
 
 ## v1
 

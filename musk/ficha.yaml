@@ -1,7 +1,7 @@
 # Ficha r7exp — "Musk: dois caminhos da IA" (21/10/2026). Fonte: texto do Nei sobre a entrevista de Elon Musk a
-# Walter Isaacson (~/projetos/output/musk-isaacson-2026-10-21/fonte.md). Uma versão só (a).
+# Walter Isaacson (~/projetos/output/musk-isaacson-2026-10-21/fonte.md). Uma versêo só (a).
 # A ordem das falas (aberturas.a → caminhos → final) é a que motor/monta_avatar.py usa; as âncoras e as peças de tela
-# estão em musk/gera_musk.py (o mapa aqui é de escala log da economia, não o dos 5 futuros).
+# estêo em musk/gera_musk.py (o mapa aqui é de escala log da economia, nêo o dos 5 futuros).
 slug: musk-dois-caminhos
 marca: "INEMA · DOIS CAMINHOS DA IA"
 fonte: "Elon Musk a Walter Isaacson · estimativas dele, sem cronograma verificável"

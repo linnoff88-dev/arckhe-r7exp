@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """r7exp completo 16:9 — "A IA resolveu 100 anos de ciência?" (28/10/2026). Molde: bancos/gera_bancos.py.
 
-Mapa = as 4 peças lado a lado (física 1954 · computação 1999 · matemática 1917 · você); cada bloco muda de estado:
+Mapa = as 4 peças lado a lado (física 1954 · computaçêo 1999 · matemática 1917 · você); cada bloco muda de estado:
 0 "?" · 1 o fato · 2 o limite · 3 o que fazer. O Rafael (41, professor de matemática) atravessa as 4 peças.
 Peça 4 tem o gráfico dos anos em que cada pergunta ficou aberta (109 · 72 · 27), palco cheio, fonte embaixo.
 Reaproveita peças do motor/musk/php/bots sem editá-los (mesmo esquema do bots/gera_bots.py).
@@ -25,7 +25,7 @@ GX, GY, GS = G.GX, G.GY, G.GS
 VERDE, VERM, AMAR = "#4ade80", "#ff4d4d", "#FACC15"
 #        slug       nome                ícone      sub         cor        fato (2 linhas)                  risco (2 linhas)                o que fazer (2 linhas)
 PECAS = [("fisica", "FÍSICA", "⚛️", "1954", "#60a5fa", ("A TEORIA", "EXISTE"), ("SÓ A", "METADE"), ("CONFERIR", "O RESTO")),
-         ("computacao", "COMPUTAÇÃO", "💻", "1999", "#c084fc", ("A HIPÓTESE", "CAIU"), ("AINDA", "LENTO"), ("SEPARAR", "MEDO E FATO")),
+         ("computacao", "COMPUTAÇêO", "💻", "1999", "#c084fc", ("A HIPÓTESE", "CAIU"), ("AINDA", "LENTO"), ("SEPARAR", "MEDO E FATO")),
          ("matematica", "MATEMÁTICA", "📐", "1917", "#fb923c", ("TODAS AS", "DIMENSÕES"), ("DIFÍCIL DE", "ENTENDER"), ("EXPLICAR", "A PROVA")),
          ("voce", "VOCÊ", "🧑", "2026", AMAR, ("CHEGA NO", "SEU TRABALHO"), ("SÓ", "ASSISTIR"), ("COORDENAR", "A MÁQUINA"))]
 TX0, TSTEP, TW, TY, TH = 400, 345, 315, 300, 520
@@ -88,7 +88,7 @@ def mapa_svg(f):
 
 class Cena(P.Cena):
     def zoom_tile(self, t, i, z=1.08):
-        # origem presa à esquerda: o quadro cresce para a direita e não entra sob o PiP do avatar
+        # origem presa à esquerda: o quadro cresce para a direita e nêo entra sob o PiP do avatar
         x0 = GX + TX0 * GS
         cx = min(GX + (TX0 + i * TSTEP + TW / 2) * GS, (x0 * z - 380) / (z - 1))
         self.a(f'tl.to("#cam", {{scale:{z}, transformOrigin:"{cx:.0f}px {gy(TY + TH / 2):.0f}px", duration:1.4, ease:"power2.inOut"}}, {t:.2f});')
@@ -136,7 +136,7 @@ class Cena(P.Cena):
     def grafico(self, F, ini, fim):
         linhas = [("agulha", "Matemática", "a agulha · 1917", 109, "#fb923c"),
                   ("fisica", "Física", "a massa · 1954", 72, "#60a5fa"),
-                  ("computacao", "Computação", "o atalho · 1999", 27, "#c084fc")]
+                  ("computacao", "Computaçêo", "o atalho · 1999", 27, "#c084fc")]
         F.cur = ini - F.ini - 0.02
         inner = self.id("in")
         corpo = (f'<div class="in opaque" id="{inner}"><div class="graf">'
@@ -150,7 +150,7 @@ class Cena(P.Cena):
                       f'<div class="gtr"><div class="gb" id="{j}b" style="background:{cor}"></div></div>'
                       f'<div class="gv" id="{j}v" style="color:{cor}">{v}</div></div>')
             ts.append((j, F.t(pal), v))
-        corpo += '<div class="gfonte">fonte: OpenAI, 26/10/2026 · física: só a 1ª metade · provas em revisão por cientistas de fora</div></div></div>'
+        corpo += '<div class="gfonte">fonte: OpenAI, 26/10/2026 · física: só a 1ª metade · provas em revisêo por cientistas de fora</div></div></div>'
         self.clip(ini, fim, corpo, 5)
         self.cena_in_out(inner, ini, fim)
         self.esconde_mapa(ini, fim + 0.5)
@@ -173,9 +173,9 @@ class Cena(P.Cena):
         F.cur = t_capa - F.ini - 0.02
         i2 = self.id("in")
         corpo = (f'<div class="in opaque" id="{i2}"><div class="mus"><div class="chip" style="background:rgba(250,204,21,.16);color:{AMAR}">O QUE ACONTECEU</div>'
-                 f'<div class="a27t" style="font-size:76px">Não é mágica</div>')
+                 f'<div class="a27t" style="font-size:76px">Nêo é mágica</div>')
         its = []
-        for pal, ic, txt, cor in [("magica", "✕", "não é mágica", VERM), ("tudo", "✕", "não resolveu tudo", VERM),
+        for pal, ic, txt, cor in [("magica", "✕", "nêo é mágica", VERM), ("tudo", "✕", "nêo resolveu tudo", VERM),
                                   ("ramos", "✓", "mexeu em 3 ramos da ciência", VERDE), ("vez", "⚡", "tudo de uma vez, em semanas", AMAR)]:
             j = self.id("a")
             corpo += f'<div class="row27" id="{j}"><div class="ic" style="color:{cor}">{ic}</div><div style="color:{cor}">{txt}</div></div>'
@@ -195,7 +195,7 @@ class Cena(P.Cena):
         tc = F.t("rafael", depois=tg); tv = F.t("vamos", depois=tc)
         self.foto(tc - 0.2, tv + 0.2, "rafael-hoje.png", carimbo="RAFAEL · HOJE", sub="O PERSONAGEM")
         F.cur = tc - F.ini - 0.02
-        self.tags(F, [("professor", "professor de matemática · 41 anos"), ("perguntas", "✕ “certas perguntas não têm resposta”")], tv + 0.2)
+        self.tags(F, [("professor", "professor de matemática · 41 anos"), ("perguntas", "✕ “certas perguntas nêo têm resposta”")], tv + 0.2)
         self.faixa("O QUE MUDA PARA ELE · E PARA VOCÊ", tv, F.fim + 0.5)
 
     # ------------------------------------------------------------ as 4 peças
@@ -217,7 +217,7 @@ class Cena(P.Cena):
         self.abre(F, 1, tci)
         F.cur = tci - F.ini - 0.02; tia = F.t("achou", depois=tci)
         F.cur = tci - F.ini - 0.02
-        self.card(F, "O PROBLEMA", PECAS[1][4], "Não existe atalho?",
+        self.card(F, "O PROBLEMA", PECAS[1][4], "Nêo existe atalho?",
                   [("jantar", "🍽️", "jantar com 100 convidados e regras"), ("conferir", "✓", "conferir é fácil · achar é difícil"),
                    ("centenas", "📚", "centenas de artigos em cima disso")], tci - 0.2, tia - 0.3)
         self.esconde_mapa(tci - 0.8, tia)
@@ -228,7 +228,7 @@ class Cena(P.Cena):
                    ("autores", "🔍", "os próprios autores revisam")], tia - 0.2, tfo - 0.1)
         self.esconde_mapa(tia - 0.4, tfo + 0.6)
         F.cur = tfo - F.ini - 0.02; tfr = F.t("atencao", depois=tfo)
-        self.rafael(F, "rafael", tfr, "computacao-rafael.png", "RAFAEL · A COMPUTAÇÃO", [("aula", "✓ vira uma aula incrível")], depois=tia)
+        self.rafael(F, "rafael", tfr, "computacao-rafael.png", "RAFAEL · A COMPUTAÇêO", [("aula", "✓ vira uma aula incrível")], depois=tia)
         self.risco(F, 1, tfr, prox + 0.1)
 
     def matematica(self, F, prox):
@@ -242,8 +242,8 @@ class Cena(P.Cena):
         self.esconde_mapa(tci - 0.8, teq)
         F.cur = teq - F.ini - 0.02; tfo = F.t("rafael", depois=teq)
         F.cur = teq - F.ini - 0.02
-        self.card(F, "A IA", VERDE, "Uma equação nova",
-                  [("equacao", "∞", "uma equação que ninguém tinha usado"), ("todas", "✓", "todas as dimensões de uma vez")], teq - 0.2, tfo - 0.1)
+        self.card(F, "A IA", VERDE, "Uma equaçêo nova",
+                  [("equacao", "∞", "uma equaçêo que ninguém tinha usado"), ("todas", "✓", "todas as dimensões de uma vez")], teq - 0.2, tfo - 0.1)
         self.esconde_mapa(teq - 0.4, tfo + 0.6)
         F.cur = tfo - F.ini - 0.02; tfr = F.t("atencao", depois=tfo)
         self.rafael(F, "rafael", tfr, "matematica-rafael.png", "RAFAEL · A MATEMÁTICA", [("cruza", "✓ a máquina cruza ideias de um jeito novo")], depois=teq)
@@ -271,7 +271,7 @@ class Cena(P.Cena):
     def final(self, F, fim_total):
         t0 = F.ini
         cards = [("fisica-rafael.png", PECAS[0][4], "FÍSICA", "conferir a metade aberta", "metade"),
-                 ("computacao-rafael.png", PECAS[1][4], "COMPUTAÇÃO", "separar medo e verdade", "medo"),
+                 ("computacao-rafael.png", PECAS[1][4], "COMPUTAÇêO", "separar medo e verdade", "medo"),
                  ("matematica-rafael.png", PECAS[2][4], "MATEMÁTICA", "explicar a prova", "explicar"),
                  ("voce-rafael.png", PECAS[3][4], "VOCÊ", "coordenar a máquina", "coordenar")]
         inner = self.id("in")

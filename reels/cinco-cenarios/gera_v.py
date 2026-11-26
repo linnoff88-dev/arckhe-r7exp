@@ -3,7 +3,7 @@
 
 Sem avatar novo: corta frases das falas já gravadas do completo 5 futuros (completo/build/n-<fala>.mp4,
 tempos por palavra em completo/tempos/) e junta num só avatar. Layout D17: 2/3 de cima = chamada (topo) ·
-gráfico vertical (desenhado aqui, não o 16:9 encolhido) · imagem da Ana; avatar no terço de baixo o reel inteiro.
+gráfico vertical (desenhado aqui, nêo o 16:9 encolhido) · imagem da Ana; avatar no terço de baixo o reel inteiro.
 
 Uso: python3 gera_v.py        → cena/index.html + cena/assets/av.mp4
      depois: cd cena && npx --yes hyperframes@0.8.181 check && npx --yes hyperframes@0.8.181 render -o ../build/cinco-cenarios.mp4
@@ -20,7 +20,7 @@ from gera import legenda, CORRIGE, norm  # noqa: E402
 CENA = AQUI / "cena"
 A = CENA / "assets"
 
-# (seção, fala, início, fim) — frases inteiras, tempos do whisper (completo/tempos)
+# (seçêo, fala, início, fim) — frases inteiras, tempos do whisper (completo/tempos)
 SEG = [
     ("hook", "0b-intro-mundo-muda", 0.00, 3.94),
     ("ai2027", "0b-intro-mundo-muda", 10.80, 17.78),
@@ -37,14 +37,14 @@ SEG = [
     ("fim", "6-final-preparar", 32.08, 38.82),
 ]
 PRE, POS = 0.10, 0.22
-FIM = 3.8   # cartão final, sem fala
+FIM = 3.8   # cartêo final, sem fala
 
 LIN = {  # mapa dos 5 caminhos (mesmas curvas do completo; x 760 = 2026, 1700 = 2050)
     "U": ("UTOPIA VERDADEIRA", "#a78bfa", "M760,680 C840,520 900,470 1040,430 S1450,300 1700,170", 150),
     "P": ("PARAÍSO FEITO PELA IA", "#4ade80", "M760,680 C900,520 1020,380 1200,350 S1500,340 1700,340", 318),
     "G": ("GOVERNO MUNDIAL DA IA", "#facc15", "M760,680 C840,560 900,520 1040,520 L1700,520", 498),
     "Z": ("ZOOLÓGICO HUMANO", "#e052e6", "M760,680 C830,630 880,615 940,618 S1060,650 1200,655 L1700,655", 633),
-    "E": ("EXTINÇÃO TOTAL", "#ff4d4d", "M760,680 C840,680 900,720 1000,800 S1200,880 1300,885 L1700,885", 862),
+    "E": ("EXTINÇêO TOTAL", "#ff4d4d", "M760,680 C840,680 900,720 1000,800 S1200,880 1300,885 L1700,885", 862),
 }
 ORDEM = ["E", "Z", "G", "P", "U"]
 FOTO = {"E": ("extincao-casa.png", "extincao-corrida.png"), "Z": ("ana-2040-zoo.png", "ana-2040-vidro.png"),
@@ -67,7 +67,7 @@ def link(src, dst):
 
 
 def corta():
-    """corta cada frase do avatar, junta em av.mp4 e devolve (palavras com tempo global, início de cada seção, total)."""
+    """corta cada frase do avatar, junta em av.mp4 e devolve (palavras com tempo global, início de cada seçêo, total)."""
     tmp = AQUI / "build" / "partes"
     tmp.mkdir(parents=True, exist_ok=True)
     pal, secoes, t, lista = [], {}, 0.0, []
@@ -108,14 +108,14 @@ class Tl:
         self.js.append(s)
 
     def w(self, sec, prefixo, n=1):
-        """tempo da n-ésima palavra que começa com `prefixo` dentro da seção."""
+        """tempo da n-ésima palavra que começa com `prefixo` dentro da seçêo."""
         k = 0
         for x in self.pal:
             if x["sec"] == sec and norm(x["word"]).startswith(prefixo):
                 k += 1
                 if k == n:
                     return x["t"]
-        raise SystemExit(f"palavra não achada: {sec}/{prefixo}")
+        raise SystemExit(f"palavra nêo achada: {sec}/{prefixo}")
 
     def show(self, sel, t0, t1=None, d=0.35):
         self.a(f'tl.to("{sel}", {{opacity:1, duration:{d}}}, {t0:.2f});')
@@ -212,7 +212,7 @@ def main():
     for im in imgs:
         link(C / "imagens" / im, A / im)
 
-    # ---- chamadas (topo): (seção, palavra|None, chip, cor do chip, html)
+    # ---- chamadas (topo): (seçêo, palavra|None, chip, cor do chip, html)
     H = [
         ("ai2027", None, "O QUE VAI ACONTECER", "#FACC15", 'EM <b>2027</b>, A IA PROGRAMA <b>MELHOR QUE NÓS</b>'),
         ("ai2027", "acelerar", "O QUE VAI ACONTECER", "#FACC15", 'E ACELERA A <b>PRÓPRIA PESQUISA</b>'),
@@ -221,13 +221,13 @@ def main():
         ("mapa", None, "200 MIL ANOS", "#38bdf8", 'A HISTÓRIA FOI UMA <b>LINHA QUASE RETA</b>'),
         ("mapa", "agora", "A PARTIR DE AGORA", "#FACC15", 'PELA PRIMEIRA VEZ, <b>ELA SE ABRE</b>'),
         ("mapa", "cinco", "A PARTIR DE AGORA", "#FACC15", '<b>5 CAMINHOS</b> ATÉ 2050'),
-        ("E", None, "CAMINHO 1 DE 5", LIN["E"][1], '<b>EXTINÇÃO TOTAL</b>'),
-        ("E", "odiar", "CAMINHO 1 DE 5", LIN["E"][1], 'ELA NÃO PRECISA <b>NOS ODIAR</b>'),
-        ("E", "como", "CAMINHO 1 DE 5", LIN["E"][1], 'A ANA EM 2040? <b>NÃO VIVE.</b>'),
+        ("E", None, "CAMINHO 1 DE 5", LIN["E"][1], '<b>EXTINÇêO TOTAL</b>'),
+        ("E", "odiar", "CAMINHO 1 DE 5", LIN["E"][1], 'ELA NêO PRECISA <b>NOS ODIAR</b>'),
+        ("E", "como", "CAMINHO 1 DE 5", LIN["E"][1], 'A ANA EM 2040? <b>NêO VIVE.</b>'),
         ("Z", None, "CAMINHO 2 DE 5", LIN["Z"][1], '<b>ZOOLÓGICO HUMANO</b>'),
         ("Z", "mantem", "CAMINHO 2 DE 5", LIN["Z"][1], 'BEM CUIDADOS, COMO <b>ANIMAIS NUM ZOO</b>'),
         ("Z", "nenhum", "CAMINHO 2 DE 5", LIN["Z"][1], 'NENHUMA CONTA. <b>NENHUMA ESCOLHA.</b>'),
-        ("Z", "conforto", "CAMINHO 2 DE 5", LIN["Z"][1], 'CONFORTO <b>NÃO É LIBERDADE</b>'),
+        ("Z", "conforto", "CAMINHO 2 DE 5", LIN["Z"][1], 'CONFORTO <b>NêO É LIBERDADE</b>'),
         ("G", None, "CAMINHO 3 DE 5", LIN["G"][1], '<b>GOVERNO MUNDIAL DA IA</b>'),
         ("G", "emprego", "CAMINHO 3 DE 5", LIN["G"][1], 'EMPREGO <b>ESCOLHIDO PELO SISTEMA</b>'),
         ("G", "desde", "CAMINHO 3 DE 5", LIN["G"][1], 'VIVE BEM, <b>SE SEGUIR A REGRA</b>'),
@@ -236,8 +236,8 @@ def main():
         ("P", "risco", "CAMINHO 4 DE 5", LIN["P"][1], 'QUEM DECIDE A SUA <b>FELICIDADE?</b>'),
         ("U", None, "CAMINHO 5 DE 5", LIN["U"][1], '<b>UTOPIA VERDADEIRA</b>'),
         ("U", "equipe", "CAMINHO 5 DE 5", LIN["U"][1], 'UMA <b>EQUIPE DE AGENTES</b> COM ELA'),
-        ("U", ("caminho", 2), "CAMINHO 5 DE 5", LIN["U"][1], 'O MAIS DIFÍCIL: <b>DEPENDE DE MUITAS MÃOS</b>'),
-        ("decide", None, "O QUE MUDA TUDO", "#FACC15", 'NÃO É A TECNOLOGIA. <b>É QUEM DECIDE.</b>'),
+        ("U", ("caminho", 2), "CAMINHO 5 DE 5", LIN["U"][1], 'O MAIS DIFÍCIL: <b>DEPENDE DE MUITAS MêOS</b>'),
+        ("decide", None, "O QUE MUDA TUDO", "#FACC15", 'NêO É A TECNOLOGIA. <b>É QUEM DECIDE.</b>'),
         ("fim", None, "E VOCÊ?", "#FACC15", 'A MASSA <b>ESPERA PARA VER</b>'),
         ("fim", "quem", "E VOCÊ?", "#FACC15", 'QUEM SE PREPARA <b>DESENHA A LINHA</b>'),
         ("fim", "qual", "E VOCÊ?", "#FACC15", 'QUAL FUTURO <b>VOCÊ QUER?</b>'),
@@ -286,7 +286,7 @@ def main():
     J.show("#v19", ts - 0.2, S["mapa"])
     J.a(f'tl.to({{n:0}}, {{n:19, duration:2.2, ease:"power2.out", onUpdate:function(){{document.getElementById("n19").textContent="−"+Math.round(this.targets()[0].n)+"%";}}}}, {ts + 0.2:.2f});')
     # mapa dos 5 caminhos (do "200 mil anos" até o fim)
-    v.append(f'<div class="vw" id="vm">{mapa_svg()}<div class="fonte">cenários inspirados em Max Tegmark, Life 3.0 · ilustrativo, não previsão</div></div>')
+    v.append(f'<div class="vw" id="vm">{mapa_svg()}<div class="fonte">cenários inspirados em Max Tegmark, Life 3.0 · ilustrativo, nêo previsêo</div></div>')
     J.show("#vm", S["mapa"] - 0.1, S["decide"])
     J.a(f'tl.to("#hist", {{attr:{{"stroke-dashoffset":0}}, duration:2.4, ease:"power1.inOut"}}, {S["mapa"]:.2f});')
     J.a(f'tl.to("#histt", {{opacity:1, duration:0.4}}, {S["mapa"] + 0.3:.2f});')
@@ -304,7 +304,7 @@ def main():
         J.a(f'tl.to("#l{k}", {{attr:{{"stroke-width":20}}, duration:0.4}}, {t0:.2f}); tl.to("#l{k}", {{attr:{{"stroke-width":12}}, duration:0.3}}, {t1 - 0.3:.2f});')
     # quem decide: 72%
     v.append('<div class="vw" id="v72"><div class="big" id="n72" style="top:10px;font-size:200px;color:#FACC15">0%</div>'
-             '<div class="lbl" style="top:230px;font-size:36px">do poder dos 20 maiores supercomputadores de IA<br>está nas mãos de <span style="color:#FACC15">3 donos</span></div>'
+             '<div class="lbl" style="top:230px;font-size:36px">do poder dos 20 maiores supercomputadores de IA<br>está nas mêos de <span style="color:#FACC15">3 donos</span></div>'
              '<div class="barra" style="top:356px"><div id="b72" style="width:0%;background:#FACC15"></div></div>'
              '<div class="lbl" style="top:470px;font-size:32px;text-align:left;color:#FACC15">xAI · Meta · Microsoft<span style="position:absolute;right:0;color:#8b8b98">todos os outros</span></div>'
              '<div class="fonte" style="bottom:10px;text-align:center">fonte: Epoch AI, base de clusters de GPU · out/2026</div></div>')
@@ -341,7 +341,7 @@ def main():
         J.a(f'tl.to("#bi{i}", {{opacity:1, duration:0.5}}, {max(0, t0 - 0.25):.2f}); tl.set("#bi{i}", {{opacity:0}}, {t1 + 0.3:.2f});')
         J.a(f'tl.fromTo("#bi{i}", {{scale:1}}, {{scale:1.07, duration:{t1 - t0 + 0.6:.2f}, ease:"none", immediateRender:false}}, {max(0, t0 - 0.25):.2f});')
     tags = [("E", "casa", "a casa dela está vazia", LIN["E"][1]), ("Z", "escolha", "✕ trabalho  ✕ contas  ✕ escolha", LIN["Z"][1]),
-            ("G", "nota", "nota de cidadã · câmeras em cada esquina", LIN["G"][1]), ("P", "quando", "doenças vencidas · cidade verde", LIN["P"][1]),
+            ("G", "nota", "nota de cidadê · câmeras em cada esquina", LIN["G"][1]), ("P", "quando", "doenças vencidas · cidade verde", LIN["P"][1]),
             ("U", "equipe", "ela lidera o próprio projeto", LIN["U"][1])]
     tg = []
     for i, (s, p, txt, cor) in enumerate(tags):

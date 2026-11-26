@@ -1,8 +1,8 @@
 # Estado — completo "5 futuros" (21/10/2026)
 
-Pedido do Nei: dois vídeos completos 16:9 — (a) "Em qual destes 5 futuros você vai acordar em 2040? / Um deles é a extinção"
+Pedido do Nei: dois vídeos completos 16:9 — (a) "Em qual destes 5 futuros você vai acordar em 2040? / Um deles é a extinçêo"
 e (b) "O mundo vai mudar. E você vai junto. / Será que você tem escolha?" (AI 2027 + Stanford) — com avatar nas 2 aberturas,
-nos 5 caminhos e no final "como se preparar"; cada caminho ensina como se adaptar e não ser a massa.
+nos 5 caminhos e no final "como se preparar"; cada caminho ensina como se adaptar e nêo ser a massa.
 
 1. falas/*.txt (8 falas) → `completo/avatar.sh enviar` (estúdio HeyGen, TEMPLATE-AVATAR16) → ids em avatar/*.id ✅ 21/10 00h
 2. `completo/avatar.sh baixar` → avatar/*.mp4 (espera o HeyGen)
@@ -12,7 +12,7 @@ nos 5 caminhos e no final "como se preparar"; cada caminho ensina como se adapta
 6. v3 ✅ 21/10 ~02h (A e B, cópias de 39 MB) — sem YouTube até o Nei aprovar
 
 ## Publicado (21/10/2026 ~02h15)
-- A → lives11 (INEMA Futuros): https://www.youtube.com/watch?v=ddWUJbfPgPk — thumb NÃO aplicada (canal sem verificação de telefone); arte em build/thumb-a.jpg
+- A → lives11 (INEMA Futuros): https://www.youtube.com/watch?v=ddWUJbfPgPk — thumb NêO aplicada (canal sem verificaçêo de telefone); arte em build/thumb-a.jpg
 - B → lives1 (INEMA TDS): https://www.youtube.com/watch?v=W2tBGNYlzi4 — capa nova capa-b1 ("2027. VOCÊ TEM ESCOLHA?"), thumb aplicada
 - v3: vídeos A/B identificados + capas + 3 opções de capa B; links no inemaytbot
 
@@ -37,12 +37,12 @@ nos 5 caminhos e no final "como se preparar"; cada caminho ensina como se adapta
 - Pedido do Nei: "refaca ele usando o rtex rtexjp e r7ex e r7exp publique no lives11 na fila, e manda todos no v3".
 - `reels/cinco-cenarios-v2/`: `fala.txt` (315 palavras) → `avatar.sh enviar|baixar|preparar` (estúdio HeyGen, TEMPLATE-AVATAR16) → `gera_v2.py` (mesmo layout do cinco-cenarios; seções por palavra-marco). 107,5 s, −14,4 LUFS.
 - Whisper pulou 87–98 s: retranscrito o trecho e juntado (original em `tempos/fala.whisper-original.json`).
-- Revisor independente: aprovado 8, impacto 8; aplicadas: Ana apresentada na tela, "no cenário AI 2027", contador 72% em "três empresas", inema.club no cartão final.
-- v3 msg 2954 · fila r7ex lives11 + playlist PLGR_G3hBAAaM (posição 11).
-- r7ex irmão: `~/projetos/r7ex/edicoes/2026-10-28-cinco-futuros-escolha` (produção automática → v3 + fila lives11 + playlist).
+- Revisor independente: aprovado 8, impacto 8; aplicadas: Ana apresentada na tela, "no cenário AI 2027", contador 72% em "três empresas", inema.club no cartêo final.
+- v3 msg 2954 · fila r7ex lives11 + playlist PLGR_G3hBAAaM (posiçêo 11).
+- r7ex irmêo: `~/projetos/r7ex/edicoes/2026-10-28-cinco-futuros-escolha` (produçêo automática → v3 + fila lives11 + playlist).
 - Reenvio ao v3 dos 10 já feitos: msgs 2930–2949 (`completo/reels/reenvio-2026-10-28b/`).
 
 ## Compilado 9:16 dos 6 reels em 2 partes (01/11/2026)
-- Pedido do Nei: juntar os reels (uma etapa em cada), 1ª com imagem impactante "você não pode deixar de fazer seu plano", publicar no metritds e no lives. Juntos davam 4:25 (> 3 min do Reels/Shorts) → 2 partes, parte 2 duas horas depois.
+- Pedido do Nei: juntar os reels (uma etapa em cada), 1ª com imagem impactante "você nêo pode deixar de fazer seu plano", publicar no metritds e no lives. Juntos davam 4:25 (> 3 min do Reels/Shorts) → 2 partes, parte 2 duas horas depois.
 - `completo/reels/compilado-5-caminhos/`: seg/ (reels sem a tela final repetida, exceto o último de cada parte), capa1/capa2 (Codex image_gen, Ana), parte1 (capa + índice + caminhos 1–2, 2:05) e parte2 (capa "PARTE 2 · FALTAM 3 FUTUROS" + caminhos 3–5, 2:04). Capa por cima da 1ª frase, 4,6 s com fade.
 - v3 msgs 3228/3230 (cópias -v3 leves; o original passa de 49 MB). lives11: parte 1 mQGNvYL-T4c, parte 2 I_qzz6o4Fdo (agendada 01/11 14:27), playlist PLGR_G3hBAAaM (posições 11–12). metritds (Instagram + TikTok inema.tds): 12:41 e 14:27, vídeos na release social de inematds/r7exp. Links no inemaytbot.

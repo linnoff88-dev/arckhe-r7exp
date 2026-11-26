@@ -18,7 +18,7 @@ case "${1:-}" in
     for f in "$AQUI"/avatar/*.id; do
       n=$(basename "$f" .id); [ -s "$AQUI/avatar/$n.mp4" ] && continue
       (cd "$HG" && node heygen-estudio-baixar.mjs --id "$(cat "$f")" --saida "$AQUI/avatar/$n.mp4" --minutos 290 --intervalo 120) \
-        > "$AQUI/avatar/$n.baixar.log" 2>&1 && echo "pronto $n" || echo "não baixou $n: $(tail -1 "$AQUI/avatar/$n.baixar.log")"
+        > "$AQUI/avatar/$n.baixar.log" 2>&1 && echo "pronto $n" || echo "nêo baixou $n: $(tail -1 "$AQUI/avatar/$n.baixar.log")"
     done ;;
   *) echo "uso: $0 enviar | baixar"; exit 2 ;;
 esac

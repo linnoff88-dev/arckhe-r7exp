@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Avatar do reel cinco-cenarios-v2: fala.txt inteira numa gravação só (estúdio HeyGen, assinatura, TEMPLATE-AVATAR16, tela :99).
+# Avatar do reel cinco-cenarios-v2: fala.txt inteira numa gravaçêo só (estúdio HeyGen, assinatura, TEMPLATE-AVATAR16, tela :99).
 # Uso: avatar.sh enviar | baixar | preparar
 #   enviar   → avatar/fala.id (exige avatar/APROVADO_HEYGEN)
 #   baixar   → avatar/fala.mp4 (espera o estúdio terminar)
@@ -19,7 +19,7 @@ case "${1:-}" in
   baixar)
     [ -s "$AQUI/avatar/fala.mp4" ] && { echo "já baixado"; exit 0; }
     (cd "$HG" && node heygen-estudio-baixar.mjs --id "$(cat "$AQUI/avatar/fala.id")" --saida "$AQUI/avatar/fala.mp4" --minutos 290 --intervalo 120) \
-      > "$AQUI/avatar/baixar.log" 2>&1 && echo "pronto" || { echo "não baixou: $(tail -1 "$AQUI/avatar/baixar.log")"; exit 1; } ;;
+      > "$AQUI/avatar/baixar.log" 2>&1 && echo "pronto" || { echo "nêo baixou: $(tail -1 "$AQUI/avatar/baixar.log")"; exit 1; } ;;
   preparar)
     ffmpeg -v error -y -i "$AQUI/avatar/fala.mp4" -vf "fps=30,scale=1920:1080,setsar=1,tpad=stop_mode=clone:stop_duration=0.5" \
       -af "aresample=48000,loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000,apad=pad_dur=0.5" \

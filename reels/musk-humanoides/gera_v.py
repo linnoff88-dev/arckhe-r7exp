@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""r7exp vertical (9:16) — "Musk: os humanoides vão mudar tudo" (21/10/2026), lives6.
+"""r7exp vertical (9:16) — "Musk: os humanoides vêo mudar tudo" (21/10/2026), lives6.
 
 Molde: reels/thwaites/gera_v.py. Diferença: o avatar abre em MEIA TELA (1080x960, embaixo) até "desenho" e vai para o PiP.
-Blocos: abertura (capa) · cérebro sem mãos → golfinho → curva de valor · escada log 1×…1.000.000× (palpite) ·
+Blocos: abertura (capa) · cérebro sem mêos → golfinho → curva de valor · escada log 1×…1.000.000× (palpite) ·
 dinheiro → watts e toneladas · Marcos e os dois caminhos · plano em 3 passos · participante ou espectador + inema.club.
 Uso: python3 gera_v.py [--falso]   Precisa: tempos/w/words.json, cena/assets/avatar.mp4, imagens. Saída: cena/index.html
 """
@@ -19,7 +19,7 @@ OUT = AQUI / "cena"
 FONTE = "Elon Musk a Walter Isaacson (série The Builders, out/2026) · números = palpite dele · imagens ilustrativas"
 
 TROCAS = [
-    ("trinta por cento", "30%"), ("30 por cento", "30%"), ("um milhão de vezes", "1 milhão de vezes"),
+    ("trinta por cento", "30%"), ("30 por cento", "30%"), ("um milhêo de vezes", "1 milhêo de vezes"),
     ("inema ponto club", "inema.club"), ("inema club", "inema.club"), ("inema.club", "inema.club"),
 ]
 COR = {"cai": "#ff4d4d", "espectador": "#ff4d4d", "longe": "#ff4d4d", "barato": "#ff4d4d", "explode": "#FACC15"}
@@ -58,7 +58,7 @@ class Fala:
                     self.cur = x["start"]
                     return round(x["start"], 2)
         if obrig:
-            raise SystemExit(f"âncora '{pal}' não achada depois de {self.cur:.2f}s")
+            raise SystemExit(f"âncora '{pal}' nêo achada depois de {self.cur:.2f}s")
 
     @property
     def fim(self):
@@ -158,18 +158,18 @@ def bloco_cerebro(c, F, ini, fim):
     tPMC = [F.t("pega"), F.t("monta"), F.t("constrói")]
     tEx = F.t("explode")
     c.imagem(ini, tGo + 0.3, "cerebro.png", pos="50% 50%", z=1.08,
-             extra='<div class="lbl1" id="lCe">🧠 IA de hoje:<br><b style="color:#FACC15">CÉREBRO SEM MÃOS</b></div>')
+             extra='<div class="lbl1" id="lCe">🧠 IA de hoje:<br><b style="color:#FACC15">CÉREBRO SEM MêOS</b></div>')
     c.entra("#lCe", tCe - 0.1)
     c.imagem(tGo - 0.1, tQu + 0.3, "golfinho.png", pos="50% 50%", z=1.08,
-             extra='<div class="lbl1" id="lGo">🐬 muito inteligente,<br><b style="color:#ff4d4d">MAS NÃO PEGA NADA</b></div>')
+             extra='<div class="lbl1" id="lGo">🐬 muito inteligente,<br><b style="color:#ff4d4d">MAS NêO PEGA NADA</b></div>')
     c.entra("#lGo", tGo + 0.2)
-    # curva de valor: plana sem mãos, explode com corpo
+    # curva de valor: plana sem mêos, explode com corpo
     X = lambda k: 120 + k * 8.6          # k 0..100
     pts_plana = " L".join(f"{X(k):.0f},{900 - k * 0.6:.0f}" for k in range(0, 101, 5))
     pts_exp = " L".join(f"{X(k):.0f},{900 - 30 - (2.718 ** (k / 100 * 6.3) - 1) * 1.15:.0f}" for k in range(0, 101, 4))
     corpo = svg(f'''
- <text class="t1" x="540" y="150" text-anchor="middle">CÉREBRO + MÃOS</text>
- <text class="t3" x="540" y="205" text-anchor="middle" fill="#d8d8e0">esquema da ideia do Musk · não é medição</text>
+ <text class="t1" x="540" y="150" text-anchor="middle">CÉREBRO + MêOS</text>
+ <text class="t3" x="540" y="205" text-anchor="middle" fill="#d8d8e0">esquema da ideia do Musk · nêo é mediçêo</text>
  <path d="M120,260 V900 H1000" stroke="#55555f" stroke-width="4" fill="none"/>
  <path d="M120,420 H1000 M120,580 H1000 M120,740 H1000" stroke="#24242e" stroke-width="2"/>
  <text x="96" y="580" class="t3" fill="#d8d8e0" text-anchor="middle" transform="rotate(-90 96 580)">VALOR ↑</text>
@@ -189,7 +189,7 @@ def bloco_cerebro(c, F, ini, fim):
         c.entra(f"#cvH{i}", tp - 0.05)
     c.a(f'tl.to("#cvE", {{strokeDashoffset:0, duration:{max(1.2, tEx - tCo):.2f}, ease:"power2.in"}}, {tCo:.2f});')
     c.entra("#cvEt", tEx)
-    c.painel(ini, fim, "A IMAGEM DO MUSK", [(tCe, "🧠 IA de hoje: sem mãos"), (tGo, "🐬 golfinho: igual"),
+    c.painel(ini, fim, "A IMAGEM DO MUSK", [(tCe, "🧠 IA de hoje: sem mêos"), (tGo, "🐬 golfinho: igual"),
                                             (tHu, "🤖 com corpo, o valor <b style='color:#FACC15'>explode</b>")])
 
 
@@ -226,7 +226,7 @@ def bloco_conta(c, F, ini, fim):
     base, dec = 1000, 105
     y = lambda d: base - 40 - d * dec            # d = log10(v)
     grade = ""
-    for d, lab in enumerate(["1×", "10×", "100×", "1 mil×", "10 mil×", "100 mil×", "1 milhão×"]):
+    for d, lab in enumerate(["1×", "10×", "100×", "1 mil×", "10 mil×", "100 mil×", "1 milhêo×"]):
         grade += (f'<path d="M210,{y(d):.0f} H1040" stroke="#2c2c38" stroke-width="2"/>'
                   f'<text x="196" y="{y(d) + 10:.0f}" class="t3" fill="#d8d8e0" text-anchor="end">{lab}</text>')
     def barra(nome, x, cor):
@@ -239,7 +239,7 @@ def bloco_conta(c, F, ini, fim):
  <g id="l1"><text x="355" y="1050" class="t2" fill="#fff" text-anchor="middle">HOJE</text><text x="355" y="{y(0) - 24:.0f}" class="t2" fill="#fff" text-anchor="middle">1×</text></g>
  <g id="l2"><text x="630" y="1050" class="t2" fill="#7cc4ff" text-anchor="middle">IA CHAT</text><text x="630" y="{y(0.12) - 24:.0f}" class="t2" fill="#7cc4ff" text-anchor="middle">1,3×</text></g>
  <g id="l3" opacity="0"><text x="905" y="1050" class="t2" fill="#FACC15" text-anchor="middle">ROBÔS +</text><text x="905" y="1098" class="t2" fill="#FACC15" text-anchor="middle">ESPAÇO</text></g>
- <g id="l3v" opacity="0"><rect x="700" y="{y(6) - 100:.0f}" width="370" height="76" rx="14" fill="#FACC15"/><text x="885" y="{y(6) - 44:.0f}" text-anchor="middle" fill="#1a1206" style="font-size:52px;font-weight:800">1 MILHÃO×</text></g>
+ <g id="l3v" opacity="0"><rect x="700" y="{y(6) - 100:.0f}" width="370" height="76" rx="14" fill="#FACC15"/><text x="885" y="{y(6) - 44:.0f}" text-anchor="middle" fill="#1a1206" style="font-size:52px;font-weight:800">1 MILHêO×</text></g>
  <g id="crb" opacity="0" transform="rotate(-12 470 560)"><rect x="240" y="500" width="460" height="110" rx="12" fill="#0c0c10cc" stroke="#ff4d4d" stroke-width="8"/>
    <text x="470" y="577" class="t2" fill="#ff4d4d" text-anchor="middle" style="font-size:50px">PALPITE DELE</text></g>
 ''')
@@ -252,7 +252,7 @@ def bloco_conta(c, F, ini, fim):
     c.a(f'tl.fromTo("#crb", {{opacity:0, scale:1.6, transformOrigin:"50% 50%"}}, {{opacity:1, scale:1, duration:0.35, ease:"back.out(2)"}}, {tVe + 0.2:.2f});')
     c.painel(ini, fim, "A CONTA · PALPITE DELE", [(tCh, "💬 só a IA do chat: <b style='color:#7cc4ff'>+30%</b>"),
                                                   (tRo, "🦾 com robôs e o espaço…")],
-             grande=(tAp + 0.2, "ATÉ 1 MILHÃO×"))
+             grande=(tAp + 0.2, "ATÉ 1 MILHêO×"))
 
 
 def bloco_dinheiro(c, F, ini, fim):
@@ -320,7 +320,7 @@ def bloco_plano(c, F, ini, fim):
  <div class="t1h">PARE E PLANEJE</div>
  <div class="pas" id="p1"><span class="ck" id="k1">✓</span><div><b>MARQUE O REPETITIVO</b><i>o que um robô faria</i></div></div>
  <div class="pas" id="p2"><span class="ck" id="k2">✓</span><div><b>USE IA HOJE</b><i>seja quem dirige a máquina</i></div></div>
- <div class="pas" id="p3"><span class="ck" id="k3">✓</span><div><b>FORTALEÇA O HUMANO</b><i>isso não se compra no mercado</i></div></div>
+ <div class="pas" id="p3"><span class="ck" id="k3">✓</span><div><b>FORTALEÇA O HUMANO</b><i>isso nêo se compra no mercado</i></div></div>
  <div class="hum"><span id="h1">🤝 confiança</span><span id="h2">❤️ cuidado</span><span id="h3">💡 criatividade</span></div>
 </div>'''
     c.palco(ini, fim, corpo)
@@ -482,7 +482,7 @@ def main():
     c = Cena()
     marcos = {}
     for k, p in [("cerebro", "Hoje"), ("conta", "Olha"), ("dinheiro", "dinheiro"), ("marcos", "Agora"),
-                 ("plano", "Então"), ("cta", "Participante")]:
+                 ("plano", "Entêo"), ("cta", "Participante")]:
         marcos[k] = F.t(p)
     marcos["dinheiro"] -= 0.3                    # "E o dinheiro…"
     F.cur = 0.0

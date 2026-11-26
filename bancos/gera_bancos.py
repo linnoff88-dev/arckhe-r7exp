@@ -27,7 +27,7 @@ VERDE, VERM, AMAR = "#4ade80", "#ff4d4d", "#FACC15"
 PECAS = [("antigo", "SISTEMA ANTIGO", "🏦", "COBOL", "#cbd5e1", ("60+ ANOS", "NO SEU DINHEIRO"), ("QUEM SABE", "SE APOSENTA"), ("MAPEAR O", "QUE EXISTE")),
          ("salto", "SALTO DA IA", "logo", "OPENAI", "#60a5fa", ("5% → 98%", "NO TESTE"), ("TESTE DA", "PRÓPRIA OPENAI"), ("TESTAR", "COM IA")),
          ("centavo", "PERIGO DO CENTAVO", "🪙", "DINHEIRO", "#fb923c", ("CORTA ×", "ARREDONDA"), ("TOTAL SAI", "DIFERENTE"), ("ESPECIALISTA", "CONFERE")),
-         ("empresa", "SUA EMPRESA", "🏢", "VOCÊ", AMAR, ("BANCOS SÃO", "SÓ O COMEÇO"), ("REFÉM DO", "FORNECEDOR"), ("MUDAR AOS", "POUCOS"))]
+         ("empresa", "SUA EMPRESA", "🏢", "VOCÊ", AMAR, ("BANCOS SêO", "SÓ O COMEÇO"), ("REFÉM DO", "FORNECEDOR"), ("MUDAR AOS", "POUCOS"))]
 TX0, TSTEP, TW, TY, TH = 400, 345, 315, 300, 520
 
 CSS_GRAF = """
@@ -88,7 +88,7 @@ def mapa_svg(f):
 
 class Cena(P.Cena):
     def zoom_tile(self, t, i, z=1.08):
-        # origem presa à esquerda: o quadro cresce para a direita e não entra sob o PiP do avatar
+        # origem presa à esquerda: o quadro cresce para a direita e nêo entra sob o PiP do avatar
         x0 = GX + TX0 * GS
         cx = min(GX + (TX0 + i * TSTEP + TW / 2) * GS, (x0 * z - 380) / (z - 1))
         self.a(f'tl.to("#cam", {{scale:{z}, transformOrigin:"{cx:.0f}px {gy(TY + TH / 2):.0f}px", duration:1.4, ease:"power2.inOut"}}, {t:.2f});')
@@ -140,7 +140,7 @@ class Cena(P.Cena):
         F.cur = ini - F.ini - 0.02
         inner = self.id("in")
         corpo = (f'<div class="in opaque" id="{inner}"><div class="graf">'
-                 f'<span class="chip" style="background:rgba(96,165,250,.16);color:#60a5fa">TESTE DE MIGRAÇÃO DE COBOL</span>'
+                 f'<span class="chip" style="background:rgba(96,165,250,.16);color:#60a5fa">TESTE DE MIGRAÇêO DE COBOL</span>'
                  f'<div class="gt">Programas reescritos <span style="color:{AMAR}">iguaizinhos</span> ao original</div>'
                  f'<div class="gs">% de acerto · cada saída tinha que bater até o último dígito</div>')
         ts = []
@@ -150,10 +150,10 @@ class Cena(P.Cena):
                       f'<div class="gtr"><div class="gb" id="{j}b" style="background:{cor}"></div></div>'
                       f'<div class="gv" id="{j}v" style="color:{cor}">{str(v).replace(".", ",")}%</div></div>')
             ts.append((j, F.t(pal), v))
-        corpo += '<div class="gfonte">fonte: OpenAI, pesquisa de 19/10/2026 · teste da própria OpenAI, ainda não aberto para outros refazerem</div></div></div>'
+        corpo += '<div class="gfonte">fonte: OpenAI, pesquisa de 19/10/2026 · teste da própria OpenAI, ainda nêo aberto para outros refazerem</div></div></div>'
         self.clip(ini, fim, corpo, 5)
         self.cena_in_out(inner, ini, fim)
-        self.esconde_mapa(ini, fim + 0.5)       # o mapa não aparece no cruzamento com a foto do Marcos
+        self.esconde_mapa(ini, fim + 0.5)       # o mapa nêo aparece no cruzamento com a foto do Marcos
         for j, t, v in ts:
             self.a(f'tl.to("#{j}", {{opacity:1, duration:0.3}}, {t - 0.35:.2f});')
             self.a(f'tl.fromTo("#{j}b", {{scaleX:0}}, {{scaleX:{v / 100:.3f}, duration:1.1, ease:"power2.out"}}, {t - 0.25:.2f});')
@@ -174,7 +174,7 @@ class Cena(P.Cena):
         F.cur = t_capa - F.ini - 0.02
         i2 = self.id("in")
         corpo = (f'<div class="in opaque" id="{i2}"><div class="mus"><div class="chip" style="background:rgba(255,77,77,.16);color:#ff4d4d">O QUE É QUEBRAR</div>'
-                 f'<div class="a27t" style="font-size:76px">Não é derrubar banco</div>')
+                 f'<div class="a27t" style="font-size:76px">Nêo é derrubar banco</div>')
         its = []
         for pal, ic, txt, cor in [("derrubar", "✕", "derrubar banco", VERM), ("dependencia", "✓", "quebrar a dependência", VERDE),
                                   ("sessenta", "📅", "de um sistema de 60+ anos", "#e5e7eb"), ("teste", "📈", "no teste: de 5% para quase 98%", AMAR)]:
@@ -208,7 +208,7 @@ class Cena(P.Cena):
         F.cur = tci - F.ini - 0.02; tfo = F.t("marcos", depois=tci)
         F.cur = tci - F.ini - 0.02
         self.card(F, "O QUE É", PECAS[0][4], "COBOL · desde 1959",
-                  [("saques", "🏧", "quase todo saque no caixa"), ("maquininha", "💳", "8 em cada 10 compras com cartão"),
+                  [("saques", "🏧", "quase todo saque no caixa"), ("maquininha", "💳", "8 em cada 10 compras com cartêo"),
                    ("linhas", "📜", "~220 bilhões de linhas rodando")], tci - 0.2, tfo - 0.1)
         self.esconde_mapa(tci - 0.8, tfo + 0.6)
         F.cur = tfo - F.ini - 0.02; tfr = F.t("problema", depois=tfo)

@@ -2,7 +2,7 @@
 """r7exp completo 16:9 — "PHP2Shell: seu site está exposto?" (21/10/2026).
 
 Reaproveita as peças do motor (motor/gera.py) e do musk/gera_musk.py sem editá-los; o mapa aqui é o quadro das
-versões do PHP (todas com a falha → 8.2–8.5 corrigidas → ≤ 8.1 sem correção oficial) + "7 em cada 10 sites".
+versões do PHP (todas com a falha → 8.2–8.5 corrigidas → ≤ 8.1 sem correçêo oficial) + "7 em cada 10 sites".
 Uso: python3 php/gera_php.py [--falso]     (--falso = tempos inventados a partir das falas, só para testar o layout)
 Precisa: imagens/*.png, tempos/<fala>.json, build/avatar-a.mp4 + build/segmentos-a.json (motor/monta_avatar.py php a).
 Saída: cena-a/index.html
@@ -53,7 +53,7 @@ def mapa_svg(f):
                     f'<text x="{cx}" y="{TY + 350}" text-anchor="middle" font-size="28" fill="{VERDE}" font-weight="800">PROTEGIDO</text></g>')
         else:
             est += (f'<g id="e2{i}" opacity="0"><text x="{cx}" y="{TY + 240}" text-anchor="middle" font-size="36" fill="{VERM}" font-weight="800">SEM</text>'
-                    f'<text x="{cx}" y="{TY + 285}" text-anchor="middle" font-size="26" fill="{VERM}" font-weight="800">CORREÇÃO</text>'
+                    f'<text x="{cx}" y="{TY + 285}" text-anchor="middle" font-size="26" fill="{VERM}" font-weight="800">CORREÇêO</text>'
                     f'<text x="{cx}" y="{TY + 320}" text-anchor="middle" font-size="26" fill="{VERM}" font-weight="800">OFICIAL</text></g>'
                     f'<g id="e3{i}" opacity="0"><text x="{cx}" y="{TY + 250}" text-anchor="middle" font-size="64" fill="{VERM}" font-weight="800">⇄</text>'
                     f'<text x="{cx}" y="{TY + 350}" text-anchor="middle" font-size="34" fill="{VERM}" font-weight="800">MUDE</text></g>')
@@ -102,7 +102,7 @@ class Cena(M.Cena):
         self.a(f'tl.to("#ticks", {{opacity:0, duration:0.4}}, {t:.2f});')
 
     def estado(self, t, idxs, s, stroke, fill, stagger=0.12):
-        """muda os blocos `idxs` para o estado s (0 ?, 1 falha, 2 corrigida/sem correção, 3 protegido/mude)"""
+        """muda os blocos `idxs` para o estado s (0 ?, 1 falha, 2 corrigida/sem correçêo, 3 protegido/mude)"""
         for k, i in enumerate(idxs):
             tt = t + k * stagger
             for e in range(4):
@@ -164,7 +164,7 @@ class Cena(M.Cena):
         its = []
         for pal, txt in [("franca", "França"), ("dinamarca", "Dinamarca"), ("finlandia", "Finlândia"), ("holanda", "Holanda")]:
             j = self.id("a"); corpo += f'<div class="row27" id="{j}"><div class="ic">🏛️</div><div>{txt}</div></div>'; its.append((j, F.t(pal)))
-        corpo += f'<div class="ress" id="{i2}rs" style="border-color:#ff4d4d;color:#ff8a8a;font-size:32px">⚠ por precaução, antes de corrigir</div></div></div>'
+        corpo += f'<div class="ress" id="{i2}rs" style="border-color:#ff4d4d;color:#ff8a8a;font-size:32px">⚠ por precauçêo, antes de corrigir</div></div></div>'
         self.clip(t_capa, tm + 0.3, corpo, 4)
         self.cena_in_out(i2, t_capa, tm + 0.3)
         self.esconde_mapa(t_capa, tm)
@@ -221,7 +221,7 @@ class Cena(M.Cena):
                       ("rapido", "✓ costumam corrigir rápido")], tf + 0.2)
         F.cur = tf - F.ini
         self.lista_verde(F, "O QUE FAZER · PLATAFORMA PRONTA", [("aviso", "confira o aviso de segurança da plataforma"),
-                                                               ("suporte", "não achou? pergunte ao suporte")],
+                                                               ("suporte", "nêo achou? pergunte ao suporte")],
                          tf - 0.1, prox - 0.1, fecho=[("mensagem", "Uma mensagem"), ("resolve", "resolve.")], cor=AZUL)
 
     # ------------------------------------------------------------ caso 2: WordPress em hospedagem
@@ -233,13 +233,13 @@ class Cena(M.Cena):
         self.faixa("O CASO DA MAIORIA DAS PEQUENAS EMPRESAS", F.t("maioria") - 0.2, tfa - 0.1, cor=AMAR)
         tlu = F.t("lucia", depois=tfa)
         F.cur = tfa - F.ini
-        self.cadeia2(F, "POR QUE PREOCUPA", [("falha", "FALHA NO PHP", "não no WordPress"), ("acionada", "ANTES DO WORDPRESS", "a falha entra primeiro"),
-                                             ("plugin", "PLUGIN DE SEGURANÇA", "✕ não segura")], "falha-servidor.png", tfa - 0.2, tlu - 0.2, VERM)
+        self.cadeia2(F, "POR QUE PREOCUPA", [("falha", "FALHA NO PHP", "nêo no WordPress"), ("acionada", "ANTES DO WORDPRESS", "a falha entra primeiro"),
+                                             ("plugin", "PLUGIN DE SEGURANÇA", "✕ nêo segura")], "falha-servidor.png", tfa - 0.2, tlu - 0.2, VERM)
         tf = F.t("fazer", depois=tlu)
         F.cur = tlu - F.ini
         self.foto(tlu - 0.2, tf + 0.2, "wordpress-lucia.png", carimbo="LÚCIA · WORDPRESS", sub="A MESMA LÚCIA")
         F.cur = tlu - F.ini
-        self.tags(F, [("ar", "site no ar"), ("funciona", "padaria funcionando"), ("versao", "✕ nem sabe a versão do PHP")], tf + 0.2)
+        self.tags(F, [("ar", "site no ar"), ("funciona", "padaria funcionando"), ("versao", "✕ nem sabe a versêo do PHP")], tf + 0.2)
         # passo 1: teste com o verificador da OpenAI
         tvul = F.t("vulneravel", depois=tf)
         F.cur = tf - F.ini
@@ -253,21 +253,21 @@ class Cena(M.Cena):
         i = self.id("in")
         corpo = (f'<div class="in opaque" id="{i}"><div class="pain"><span class="chip" style="background:{AMAR}2e;color:{AMAR}">O RESULTADO</span>'
                  f'<div class="res" id="{i}a"><b style="background:{VERM}">VULNERABLE</b><span>vulnerável → atualize</span></div>'
-                 f'<div class="res" id="{i}b"><b style="background:{AMAR}">UNKNOWN</b><span>desconhecido → NÃO é sinal verde</span></div>'
-                 f'<div class="res" id="{i}c" style="font-size:30px;color:#c9c9d2"><span>confira a versão no painel da hospedagem</span></div></div></div>')
+                 f'<div class="res" id="{i}b"><b style="background:{AMAR}">UNKNOWN</b><span>desconhecido → NêO é sinal verde</span></div>'
+                 f'<div class="res" id="{i}c" style="font-size:30px;color:#c9c9d2"><span>confira a versêo no painel da hospedagem</span></div></div></div>')
         self.clip(tvul - 0.3, tpa + 0.1, corpo, 5)
         self.cena_in_out(i, tvul - 0.3, tpa + 0.1)
         self.esconde_mapa(tvul - 0.3, tpa)
         self.meia(tvul - 0.2, tpa + 0.1)
         self.a(f'tl.to("#fonte", {{opacity:0, duration:0.3}}, {tvul - 0.3:.2f}); tl.to("#fonte", {{opacity:1, duration:0.4}}, {tpa:.2f});')
         self.entra(f"#{i}a", tvul - 0.1); self.entra(f"#{i}b", tde - 0.1); self.entra(f"#{i}c", tde + 1.4)
-        # no mapa: quais versões têm correção
+        # no mapa: quais versões têm correçêo
         tof = F.t("oficial", depois=tpa); tpr = F.t("provedor", depois=tof)
         self.mapa_todo(tpa - 0.3, ticks=False)
         self.zoom_tiles(tpa + 0.2)
         self.estado(tpa + 0.4, [3, 4, 5, 6], 2, AMAR, "#2a2410")
         self.estado(tof - 0.6, [0, 1, 2], 2, VERM, "#2a0f12")
-        self.faixa("8.1 OU MAIS VELHA: PEÇA AO PROVEDOR PARA MUDAR A VERSÃO HOJE", tpr - 1.2, prox + 0.1, cor=VERM)
+        self.faixa("8.1 OU MAIS VELHA: PEÇA AO PROVEDOR PARA MUDAR A VERSêO HOJE", tpr - 1.2, prox + 0.1, cor=VERM)
 
     # ------------------------------------------------------------ caso 3: servidor próprio
     def servidor(self, F, prox):
@@ -276,12 +276,12 @@ class Cena(M.Cena):
         self.mapa_todo(t0 - 0.4, ticks=False)
         self.titulo("CASO 3", "SERVIDOR PRÓPRIO (VPS)", ROXO, t0, tu)
         F.cur = 0
-        self.faixa("NÃO TEM A QUEM PEDIR: É COM VOCÊ", F.t("pedir") - 0.2, tu - 0.1, cor=ROXO)
+        self.faixa("NêO TEM A QUEM PEDIR: É COM VOCÊ", F.t("pedir") - 0.2, tu - 0.1, cor=ROXO)
         tf = F.t("fazer", depois=tu)
         F.cur = tu - F.ini
         self.foto(tu - 0.2, tf + 0.2, "servidor-ataque.png", carimbo="ATAQUES JÁ COMEÇARAM", sub="CLOUDFLARE · 21/10, 07:43 UTC")
         F.cur = tu - F.ini
-        self.tags(F, [("cloudflare", "⚠ a Cloudflare viu ataques"), ("antes", "⚠ antes de a correção sair")], tf + 0.2)
+        self.tags(F, [("cloudflare", "⚠ a Cloudflare viu ataques"), ("antes", "⚠ antes de a correçêo sair")], tf + 0.2)
         th = F.t("hora", depois=tf)
         F.cur = tf - F.ini
         self.foto(tf - 0.2, th + 0.1, "servidor-tecnico.png", carimbo="LÚCIA · SERVIDOR PRÓPRIO", sub="O TÉCNICO DELA")
@@ -291,11 +291,11 @@ class Cena(M.Cena):
         tex = F.t("exposto", depois=th)
         F.cur = th - F.ini
         ttot = F.t("totalmente")
-        self.quote("AJUSTE TEMPORÁRIO NÃO BASTA", VERM, "Só a atualização resolve.",
-                   "ajustes na configuração não protegem totalmente · time do PHP", th - 0.2, tex - 0.4, img="falha-servidor.png", tsub=ttot - 1.0)
+        self.quote("AJUSTE TEMPORÁRIO NêO BASTA", VERM, "Só a atualizaçêo resolve.",
+                   "ajustes na configuraçêo nêo protegem totalmente · time do PHP", th - 0.2, tex - 0.4, img="falha-servidor.png", tsub=ttot - 1.0)
         F.cur = tex - F.ini
         self.lista_verde(F, "SE O SERVIDOR FICOU EXPOSTO", [("arquivos", "procure arquivos novos"),
-                                                            ("usuarios", "e usuários que você não criou")], tex - 0.4, prox - 0.1, cor=ROXO)
+                                                            ("usuarios", "e usuários que você nêo criou")], tex - 0.4, prox - 0.1, cor=ROXO)
 
     # ------------------------------------------------------------ final
     def final(self, F, fim_total):
@@ -303,7 +303,7 @@ class Cena(M.Cena):
         tp = F.t("parar")
         cards = [("lucia-2026.png", "#9a9aa6", "HOJE", "site esquecido", None),
                  ("plataforma-lucia.png", AZUL, "PLATAFORMA", "confere com o suporte", "plataforma"),
-                 ("wordpress-lucia.png", AMAR, "HOSPEDAGEM", "testa e pede a versão nova", "hospedagem"),
+                 ("wordpress-lucia.png", AMAR, "HOSPEDAGEM", "testa e pede a versêo nova", "hospedagem"),
                  ("servidor-tecnico.png", ROXO, "SERVIDOR", "atualiza agora", "servidor")]
         inner = self.id("in")
         corpo = f'<div class="in opaque" id="{inner}"><div class="cmp">'
@@ -320,10 +320,10 @@ class Cena(M.Cena):
         for j, t in ts:
             self.a(f'tl.fromTo("#{j}", {{opacity:0, y:40}}, {{opacity:1, y:0, duration:0.5, ease:"back.out(2)"}}, {t - 0.15:.2f});')
         self.a(f'tl.set("#{inner}fr", {{opacity:0}}, 0);')
-        # não vai parar
+        # nêo vai parar
         F.cur = tp - F.ini
         th = F.t("hoje", depois=tp)
-        self.quote("ISSO NÃO VAI PARAR", VERM, "A IA está achando falhas antigas cada vez mais rápido.", "e quem ataca também usa IA",
+        self.quote("ISSO NêO VAI PARAR", VERM, "A IA está achando falhas antigas cada vez mais rápido.", "e quem ataca também usa IA",
                    tp - 0.5, th - 0.1, img="servidor-ataque.png")
         # passos
         F.cur = th - F.ini
@@ -333,7 +333,7 @@ class Cena(M.Cena):
         corpo = f'<div class="in opaque" id="{i2}"><div class="chip" style="position:absolute;left:420px;top:130px;background:rgba(74,222,128,.16);color:#4ade80">O QUE FAZER, HOJE</div><div class="passos">'
         ts = []
         for pal, num, txt in [("teste", "1", "teste o seu site: verificador gratuito da OpenAI"),
-                              ("veja", "2", "veja a versão do PHP: 8.1 ou mais velha = mude"),
+                              ("veja", "2", "veja a versêo do PHP: 8.1 ou mais velha = mude"),
                               ("mande", "3", "mande este vídeo para quem tem site antigo e esquecido")]:
             j = self.id("p"); corpo += f'<div class="ps" id="{j}"><b>{num}</b><span>{txt}</span></div>'; ts.append((j, F.t(pal)))
         corpo += "</div></div>"

@@ -66,14 +66,14 @@ class Fala:
                     self.cur = x["start"]
                     return round(x["start"], 2)
         if obrig:
-            raise SystemExit(f"âncora '{pal}' não achada depois de {self.cur:.2f}s")
+            raise SystemExit(f"âncora '{pal}' nêo achada depois de {self.cur:.2f}s")
 
     @property
     def fim(self):
         return round(self.w[-1]["end"], 2)
 
 
-# ---------------------------------------------------------------- composição
+# ---------------------------------------------------------------- composiçêo
 class Cena:
     def __init__(self):
         self.html, self.js, self.n = [], [], 0
@@ -171,7 +171,7 @@ def bloco_mapa(c, F, ini, fim):
              '<div class="lbl2" id="mP">≈ o <b style="color:#FACC15">PARANÁ</b> inteiro<br><small>199 mil km² · IBGE · mesma escala</small></div>')
     c.imagem(ini, fim, "map-ant-parana-v.png", pos="50% 0%", z=1.05, extra=extra)
     c.entra("#mT", tT); c.entra("#mP", tP)
-    c.painel(ini, fim, "ESTUDO NOVO · OUT/2026", [(tD, "contribuição da Thwaites ao mar até 2100"), (tD + 0.6, "<small>Nature Communications · UC Irvine + NASA</small>")],
+    c.painel(ini, fim, "ESTUDO NOVO · OUT/2026", [(tD, "contribuiçêo da Thwaites ao mar até 2100"), (tD + 0.6, "<small>Nature Communications · UC Irvine + NASA</small>")],
              cor="#ff4d4d", grande=(tD - 0.2, "1,5 → 3 cm"))
 
 

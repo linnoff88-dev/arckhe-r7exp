@@ -1,7 +1,7 @@
 # Qual bot você vai usar? — 4 agentes pessoais (r7exp, 22/10/2026)
 
-Pedido do Nei (22/10): "no final faz um r7exp do conteúdo e manda para mim e no lives1" — comparação Grok Bot, Meta Muse,
-ChatGPT Dots, Claude Duet (Duet ainda não no Brasil), a Carla (consultora, 41) atravessa os 4. Par do refazvideo
+Pedido do Nei (22/10): "no final faz um r7exp do conteúdo e manda para mim e no lives1" — comparaçêo Grok Bot, Meta Muse,
+ChatGPT Dots, Claude Duet (Duet ainda nêo no Brasil), a Carla (consultora, 41) atravessa os 4. Par do refazvideo
 `~/projetos/output/explica-D-pz8L1orVI`.
 
 ## Publicado (lives1 · INEMA TDS, público)
@@ -17,7 +17,7 @@ ChatGPT Dots, Claude Duet (Duet ainda não no Brasil), a Carla (consultora, 41) 
 ## Correções da fase 2 (antes de enviar)
 - Zoom no quadro do bot 3/4 empurrava os blocos para baixo do PiP do avatar: `zoom_tile` com origem presa à esquerda, z 1,08/1,06.
 - Whisper escreveu "Duet" como "Doué": CORRIGE Doué→Duet (completo e reels).
-- Pílula "AINDA NÃO NO BRASIL" mais larga que o texto; reel-índice não repete a capa na banda (usa `final-carla.png`).
+- Pílula "AINDA NêO NO BRASIL" mais larga que o texto; reel-índice nêo repete a capa na banda (usa `final-carla.png`).
 
 ## Como refazer
 - `bots/avatar.sh enviar|baixar` → `bash bots/cadeia.sh` (monta avatar, completo, limpo, reels).

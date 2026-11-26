@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Motor r7exp: ficha.yaml + tempos das falas do avatar → composição HyperFrames (index.html) de uma versão.
+"""Motor r7exp: ficha.yaml + tempos das falas do avatar → composiçêo HyperFrames (index.html) de uma versêo.
 
 Uso: motor/gera.py <pasta-do-completo> <versao>        (ex.: completo a)
 Precisa de: <pasta>/ficha.yaml, <pasta>/imagens/*.png, <pasta>/tempos/<fala>.json (palavras do whisper)
@@ -13,7 +13,7 @@ import yaml
 AQUI = Path(__file__).resolve().parent
 W, H = 1920, 1080
 GX, GY, GS = 40, -10, 0.88          # mapa: translate(GX,GY) scale(GS) no viewBox 0 0 1920 1080
-PIP = dict(left=36, top=684, w=320, h=360)          # mesma proporção da meia tela (960x1080)     # avatar no canto inferior esquerdo
+PIP = dict(left=36, top=684, w=320, h=360)          # mesma proporçêo da meia tela (960x1080)     # avatar no canto inferior esquerdo
 MEIA = dict(left=960, top=0, w=960, h=1080)    # avatar em meia tela (D8: nunca tela cheia)
 
 
@@ -40,7 +40,7 @@ class Fala:
                     self.cur = x["start"]
                     return round(self.ini + x["start"], 2)
         if obrig:
-            raise SystemExit(f"âncora '{palavra}' não achada em {self.nome} depois de {base:.2f}s")
+            raise SystemExit(f"âncora '{palavra}' nêo achada em {self.nome} depois de {base:.2f}s")
         return None
 
     @property
@@ -95,7 +95,7 @@ def mapa_svg(f):
 
 
 def fim_linha(k, f):
-    """ponto final (x,y) da linha no ecrã"""
+    """ponto final (x,y) da linha no ecrê"""
     d = f["mapa"]["linhas"][k]["d"]
     nums = re.findall(r"-?\d+(?:\.\d+)?", d)
     return gx(float(nums[-2])), gy(float(nums[-1]))
@@ -252,7 +252,7 @@ class Cena:
             self.entra(f"#{inner}rk", F.t(risco["de"]) - 0.1)
 
     def massa(self, F, itens, ini, fim, fecho=None, track=6, muitos=False, nome=""):
-        """multidão de pontos cinza; um (ou muitos) sai amarelo e sobe; à direita os itens"""
+        """multidêo de pontos cinza; um (ou muitos) sai amarelo e sobe; à direita os itens"""
         inner = self.id("in")
         pts = ""
         k = 0
@@ -265,7 +265,7 @@ class Cena:
                 pts += f'<circle class="{cls}" cx="{x}" cy="{y}" r="13"/>'
                 k += 1
         corpo = (f'<div class="in opaque" id="{inner}"><svg class="multi" width="900" height="1080" viewBox="0 0 900 1080">{pts}</svg>'
-                 f'<div class="mtit"><span class="chip" style="background:rgba(74,222,128,.16);color:#4ade80">COMO NÃO SER A MASSA{(" · " + nome) if nome else ""}</span></div>')
+                 f'<div class="mtit"><span class="chip" style="background:rgba(74,222,128,.16);color:#4ade80">COMO NêO SER A MASSA{(" · " + nome) if nome else ""}</span></div>')
         ts = []
         if itens:
             corpo += '<div class="mlist">'
@@ -308,13 +308,13 @@ class Cena:
         self.a(f'tl.to("#{inner}", {{opacity:0, duration:0.6}}, {t_capa:.2f});')
         self.esconde_mapa(-1, t_capa + 0.6)
         # avatar ABRE em meia tela (Nei, 21/10/2026: começa meia tela, depois PiP e muda conforme o plano);
-        # `abertura.avatar_meia_ate: <palavra>` na ficha estende; padrão = fim da capa
+        # `abertura.avatar_meia_ate: <palavra>` na ficha estende; padrêo = fim da capa
         fim_meia = F.t(ab["avatar_meia_ate"]) if ab.get("avatar_meia_ate") else t_capa + 0.6
         self.abre_meia(fim_meia)
         self.a(f'tl.set(["#marca","#fonte"], {{opacity:0}}, 0); tl.to(["#marca","#fonte"], {{opacity:1, duration:0.5}}, {t_capa:.2f});')
         m = ab["mapa"]
         cur = t_capa
-        if "ai2027" in ab:                                   # versão b: AI 2027 + Stanford antes do mapa
+        if "ai2027" in ab:                                   # versêo b: AI 2027 + Stanford antes do mapa
             a7 = ab["ai2027"]; ts_ = F.t(ab["stanford"]["de"]); F.cur = t_capa - F.ini
             i2 = self.id("in")
             corpo = (f'<div class="in opaque" id="{i2}"><div class="a27"><div class="chip" style="background:rgba(250,204,21,.16);color:#FACC15">UM CENÁRIO</div>'
@@ -476,7 +476,7 @@ class Cena:
         t0 = F.ini
         self.mapa_inteiro(t0 - 0.5, 1.0)
         tf = F.t(fn["frase"]["de"])
-        # comparação: 5 Anas lado a lado
+        # comparaçêo: 5 Anas lado a lado
         imgs = [("E", "extincao-casa.png"), ("Z", "ana-2040-zoo.png"), ("G", "governo-ana.png"), ("P", "paraiso-ana.png"), ("U", "utopia-ana.png")]
         inner = self.id("in")
         corpo = f'<div class="in opaque" id="{inner}"><div class="cmp">'
@@ -558,7 +558,7 @@ CORRIGE = {"ia": "IA", "Ia": "IA", "inema.club": "inema.club"}
 
 def main():
     pasta, versao = Path(sys.argv[1]).resolve(), sys.argv[2]
-    # "limpo": sem avatar e sem legenda (faixa explicativa dos reels 9:16); "ate=N" corta a duração
+    # "limpo": sem avatar e sem legenda (faixa explicativa dos reels 9:16); "ate=N" corta a duraçêo
     extras = sys.argv[3:]
     limpo = "limpo" in extras
     ate = next((float(x[4:]) for x in extras if x.startswith("ate=")), None)

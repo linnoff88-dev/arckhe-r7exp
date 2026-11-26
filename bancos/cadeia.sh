@@ -19,7 +19,7 @@ for i in $(seq 1 40); do
   [ "$ok" -ge "$n" ] && break
   log "avatar $ok/$n; tento de novo em 10 min"; sleep 600
 done
-[ "$(ls $B/avatar/[0-9]-*.mp4 2>/dev/null | wc -l)" -ge 6 ] || falha "avatar não chegou"
+[ "$(ls $B/avatar/[0-9]-*.mp4 2>/dev/null | wc -l)" -ge 6 ] || falha "avatar nêo chegou"
 log "avatar ok"
 [ -s $B/build/segmentos-a.json ] || systemd-run --user --scope --quiet -p MemoryMax=16G -p MemorySwapMax=0 python3 motor/monta_avatar.py bancos a || falha "monta_avatar"
 python3 bancos/gera_bancos.py > $B/build/gera.log 2>&1 || falha "gera_bancos (âncora? ver build/gera.log)"

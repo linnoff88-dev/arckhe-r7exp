@@ -16,5 +16,5 @@ Layout D16: avatar abre em meia tela (metade direita) até o gráfico, depois Pi
 
 ## Publicado (21/10/2026 16:49)
 - lives11 (INEMA Futuros): https://www.youtube.com/watch?v=nHopTQGwQpo — "Musk vê dois caminhos para a IA. Onde você entra?" · 3m18s
-- thumb NÃO aplicada (canal sem verificação de telefone); arte em build/thumb.jpg (= imagens/capa.png)
+- thumb NêO aplicada (canal sem verificaçêo de telefone); arte em build/thumb.jpg (= imagens/capa.png)
 - v3: msg 2149 (cópia 720p, 33 MB) · inemaytbot: links msg 2512
